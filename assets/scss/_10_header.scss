@@ -245,6 +245,21 @@
                 }
             }
         }
+        &-wishlist {
+            @include flex();
+            margin-left: 20px;
+            border: none;
+            background: none;
+            &-icon {
+                transition: 0.5s;
+            }
+            &:hover,
+            &:focus {
+                .header__menu-wishlist-icon {
+                    fill: $redColor;
+                }
+            }
+        }
         &-cart {
             @include flex();
             margin-left: 20px;
@@ -265,29 +280,30 @@
 
 @media screen and (min-width: 360px) {
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     .header__menu-burger {
-     
     }
     .header__menu-callback {
         display: none;
     }
-    .header__menu-user, .header__menu-cart {
-     
+    .header__menu-user {
+        display: none;
     }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
     .header__menu-burger {
         margin-left: 0;
     }
     .header__menu-callback {
         margin-left: 20px;
     }
-    .header__menu-user, .header__menu-cart {
+    .header__menu-user,
+    .header__menu-wishlist,
+    .header__menu-cart {
         margin-left: 10px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 990px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     .header {
         &__top {
             &-container {
@@ -332,6 +348,11 @@
                 }
                 &-link {
                     @include flex();
+                    transition: color 250ms ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        color: $redColor;
+                    }
                 }
                 &-icon {
                     fill: #fff;
@@ -355,14 +376,13 @@
         }
     }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
     .header {
-
         /*------------*/
         /*--- Menu ---*/
         /*------------*/
         &__menu {
-            width: 990px;
+            width: 992px;
             &-inner {
                 padding: 0 20px;
             }
@@ -486,7 +506,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
 }
 
 @media screen and (min-width: 1280px) {

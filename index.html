@@ -1,164 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<link href="./favicon.ico" rel="shortcut icon">
+        <link href="./favicon.ico" rel="shortcut icon" />
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Argon18</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <link rel="stylesheet" href="./assets/css/app.css" />
     </head>
     <body>
-        <header class="header">
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__top">
+                    <div class="header__top-container container">
+                        <p class="header__slogan">
+                            <svg class="header__slogan-icon" class="header__menu-list-icon" width="24" height="24">
+                                <use href="./assets/svg/icons.svg#icon-bicyclist"></use>
+                            </svg>
+                            Велосипеды из Германии
+                        </p>
+                        <address class="header__top-address">
+                            <ul class="header__top-address-list">
+                                <li class="header__top-address-item">
+                                    <span class="header__top-address-link" href="mailto:info@devstudio.com">
+                                        <svg class="header__top-address-icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-address"></use>
+                                        </svg>
+                                        Москва, ул.Лужники 24с4
+                                    </span>
+                                </li>
+                                <li class="header__top-address-item">
+                                    <a class="header__top-address-link" href="mailto:info@devstudio.com">
+                                        <svg class="header__top-address-icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-email"></use>
+                                        </svg>
+                                        sales@argon18.ru
+                                    </a>
+                                </li>
+                                <li class="header__top-address-item">
+                                    <a class="header__top-address-link" href="tel:+79857177700">
+                                        <svg class="header__top-address-icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-phone"></use>
+                                        </svg>
+                                        +7(985) 717-77-00
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                </div>
 
-            <div class="header__top">
-                <div class="header__top-container container">
-                    <p class="header__slogan">
-						<svg class="header__slogan-icon" class="header__menu-list-icon" width="24" height="24">
-							<use href="./assets/svg/icons.svg#icon-bicyclist"></use>
-						</svg>
-						Велосипеды из Германии
-					</p>
-                    <address class="header__top-address">
-                        <ul class="header__top-address-list">
-							<li class="header__top-address-item">
-                                <span class="header__top-address-link" href="mailto:info@devstudio.com">
-									<svg class="header__top-address-icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-address"></use>
-									</svg>
-									Москва, ул.Лужники 24с4
-								</span>
+                <div class="header__menu">
+                    <div class="header__menu-container container">
+                        <div class="header__menu-inner">
+                            <nav class="header__menu-nav">
+                                <a class="header__menu-logo" href="#">
+                                    <svg class="header__menu-logo-icon" width="150" height="55">
+                                        <use href="./assets/svg/icons.svg#icon-logo"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__menu-list">
+                                    <li class="header__menu-list-item">
+                                        <a href="#" class="header__menu-list-link">
+                                            О нас
+                                            <svg class="header__menu-list-icon" width="10" height="10">
+                                                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="header__menu-list-submenu">
+                                            <ul class="header__menu-list-submenu-list">
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Технологии ARGON18</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Процесс создания</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Шоу рум</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Галлерея</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Видео</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu-list-item">
+                                        <a href="#" class="header__menu-list-link">
+                                            Велосипеды
+                                            <svg class="header__menu-list-icon" width="10" height="10">
+                                                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="header__menu-list-submenu">
+                                            <ul class="header__menu-list-submenu-list">
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Электробайк</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Шоссе</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Циклокросс | Gravel</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Триатлон/ТТ</a>
+                                                </li>
+                                                <li class="header__menu-list-submenu-item">
+                                                    <a class="header__menu-list-submenu-link" href="#">Трек</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu-list-item">
+                                        <a href="#" class="header__menu-list-link">Блог</a>
+                                    </li>
+                                    <li class="header__menu-list-item">
+                                        <a href="#" class="header__menu-list-link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <button class="header__menu-burger" type="button">
+                                <svg class="header__menu-burger-icon" width="28" height="28">
+                                    <use href="./assets/svg/icons.svg#icon-burger2"></use>
+                                </svg>
+                            </button>
+                            <button class="header__menu-callback" data-tooltip="Заказать обратный звонок" data-flow="down">
+                                Callback
+                                <svg class="header__menu-callback-icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-callback"></use>
+                                </svg>
+                            </button>
+                            <button class="header__menu-user" type="button" data-tooltip="Кабинет" data-flow="down">
+                                <svg class="header__menu-user-icon" width="24" height="24">
+                                    <use href="./assets/svg/icons.svg#icon-user"></use>
+                                </svg>
+                            </button>
+                            <button class="header__menu-wishlist" type="button" data-tooltip="Кабинет" data-flow="down">
+                                <svg class="header__menu-wishlist-icon" width="24" height="24">
+                                    <use href="./assets/svg/icons.svg#icon-wishlist"></use>
+                                </svg>
+                            </button>
+                            <button class="header__menu-cart" type="button" data-tooltip="Корзина" data-flow="down">
+                                <svg class="header__menu-cart-icon" width="24" height="24">
+                                    <use href="./assets/svg/icons.svg#icon-cart"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero__container container">
+                    <h1 class="hero__title">argon 18 в России!</h1>
+                    <p class="hero__text">Мы единственный официальный дистрибьютор ARGON 18 в России!</p>
+                </div>
+            </section>
+
+            <main class="page">
+                <section class="page__photos photos">
+                    <div class="photos__container container">
+                        <div class="photos__slides swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide photos__slides-item">
+                                    <a class="photos__slides-link" href="#">
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide1.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide photos__slides-item">
+                                    <a class="photos__slides-link" href="#">
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide2.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide photos__slides-item">
+                                    <a class="photos__slides-link" href="#">
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide3.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide photos__slides-item">
+                                    <a class="photos__slides-link" href="#">
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide4.jpg" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev-slide">
+								<svg class="icon" width="16" height="16">
+									<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+								</svg>
+							</div>
+                            <div class="swiper-button-next-slide">
+								<svg class="icon" width="16" height="16">
+									<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+								</svg>
+							</div>
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+
+                        <ul class="photos__banners">
+                            <li class="photos__banners-item">
+                                <a class="photos__banners-link" href="#">
+                                    <img class="photos__banners-img" src="./assets/img/banners/1.jpg" alt="banner1" />
+                                </a>
                             </li>
-                            <li class="header__top-address-item">
-                                <a class="header__top-address-link" href="mailto:info@devstudio.com">
-									<svg class="header__top-address-icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-email"></use>
-									</svg>
-									sales@argon18.ru
-								</a>
+                            <li class="photos__banners-item">
+                                <a class="photos__banners-link" href="#">
+                                    <img class="photos__banners-img" src="./assets/img/banners/2.jpg" alt="banner2" />
+                                </a>
                             </li>
-                            <li class="header__top-address-item">
-                                <a class="header__top-address-link" href="tel:+79857177700">
-									<svg class="header__top-address-icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-phone"></use>
-									</svg>
-									+7(985) 717-77-00
-								</a>
+                            <li class="photos__banners-item">
+                                <a class="photos__banners-link" href="#">
+                                    <img class="photos__banners-img" src="./assets/img/banners/3.jpg" alt="banner3" />
+                                </a>
                             </li>
                         </ul>
-                    </address>
-                </div>
-            </div>
+                    </div>
+                </section>
+            </main>
 
-            <div class="header__menu">
-                <div class="header__menu-container container">
-					<div class="header__menu-inner">
-						<nav class="header__menu-nav">
-							<a class="header__menu-logo" href="#">
-								<svg class="header__menu-logo-icon" width="150" height="55">
-									<use href="./assets/svg/icons.svg#icon-logo"></use>
-								</svg>
-							</a>
-							<ul class="header__menu-list">
-								<li class="header__menu-list-item">
-									<a href="#" class="header__menu-list-link">
-										О нас
-										<svg class="header__menu-list-icon" width="10" height="10">
-											<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-										</svg>
-									</a>
-									<div class="header__menu-list-submenu">
-										<ul class="header__menu-list-submenu-list">
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Технологии ARGON18</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Процесс создания</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Шоу рум</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Галлерея</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Видео</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="header__menu-list-item">
-									<a href="#" class="header__menu-list-link">
-										Велосипеды
-										<svg class="header__menu-list-icon" width="10" height="10">
-											<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-										</svg>
-									</a>
-									<div class="header__menu-list-submenu">
-										<ul class="header__menu-list-submenu-list">
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Электробайк</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Шоссе</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Циклокросс | Gravel</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Триатлон/ТТ</a>
-											</li>
-											<li class="header__menu-list-submenu-item">
-												<a class="header__menu-list-submenu-link" href="#">Трек</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="header__menu-list-item">
-									<a href="#" class="header__menu-list-link">Блог</a>
-								</li>
-								<li class="header__menu-list-item">
-									<a href="#" class="header__menu-list-link">Контакты</a>
-								</li>
-							</ul>
-						</nav>
-						<button class="header__menu-burger" type="button">
-							<svg class="header__menu-burger-icon" width="28" height="28">
-								<use href="./assets/svg/icons.svg#icon-burger2"></use>
-							</svg>
-						</button>
-						<button class="header__menu-callback" data-tooltip="Заказать обратный звонок" data-flow="down">
-							Callback
-							<svg class="header__menu-callback-icon" width="16" height="16">
-								<use href="./assets/svg/icons.svg#icon-callback"></use>
-							</svg>
-						</button>
-						<button class="header__menu-user" type="button" data-tooltip="Кабинет" data-flow="down">
-							<svg class="header__menu-user-icon" width="24" height="24">
-								<use href="./assets/svg/icons.svg#icon-user"></use>
-							</svg>
-						</button>
-						<button class="header__menu-cart" type="button" data-tooltip="Корзина" data-flow="down">
-							<svg class="header__menu-cart-icon" width="24" height="24">
-								<use href="./assets/svg/icons.svg#icon-cart"></use>
-							</svg>
-						</button>
-					</div>
+            <div class="footer">
+				<div class="container">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?</p>
 				</div>
-            </div>
-        </header>
-
-		<section class="hero">
-			<div class="hero__container container">
-				<h1 class="hero__title">argon 18 в России!</h1>
-				<p class="hero__text">Мы единственный официальный дистрибьютор ARGON 18 в России!</p>
 			</div>
-		</section>
-
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="./assets/js/app.js"></script>
     </body>
 </html>
