@@ -1,0 +1,181 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    // background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../img/hero_bg_1x.jpg');
+    background-image: url("../img/hero_bg.webp");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 60%;
+        z-index: -1;
+    }
+
+    video.breadcamp-bg {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: auto;
+        z-index: -2;
+    }
+    &__container {
+        // padding-top: 64px;
+        padding-top: 16px;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+    &__text {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+
+    &__arrows {
+        opacity: 0;
+        transition: 0.5s;
+        @include flex();
+        gap: 10px;
+        animation: dance6 1.5s alternate infinite;
+        position: absolute;
+        left: 0;
+        top: 18px;
+        &-icon {
+            fill: #fff;
+            opacity: 0.7;
+        }
+    }
+    &__play-video {
+        position: relative;
+        @include flex();
+        justify-content: center;
+    }
+    &__play-btn {
+        background: transparent;
+        border: none;
+        @include flex();
+        color: $neonColor;
+        font-size: 24px;
+        transition: 0.5s;
+        &-inner {
+            @include flex();
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 50px;
+            border: 3px solid $neonColor;
+            margin-right: 16px;
+            position: relative;
+            transition: 0.5s;
+
+            &:before {
+                content: "";
+                display: block;
+                animation: animate_circle 2s cubic-bezier(0.7, 0, 0, 1) infinite;
+                border-radius: 50%;
+                left: -15px;
+                right: -15px;
+                top: -15px;
+                bottom: -15px;
+                position: absolute;
+                // transform: scale(0);
+                z-index: -1;
+                // height: 90px;
+                // width: 90px;
+                transition-duration: 1s;
+                // background-color: #3191ae;
+                border: 1px solid $neonColor;
+            }
+        }
+        &-icon {
+            fill: $neonColor;
+            margin-left: 6px;
+            transition: 0.5s;
+        }
+        &:hover {
+            color: $redColor;
+            .hero__play-btn-icon {
+                fill: $redColor;
+            }
+            .hero__play-btn-inner {
+                border-color: $redColor;
+
+                &:before {
+                    border-color: $redColor;
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate_circle {
+    0% {
+        transform: scale(0.65);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes dance6 {
+    from {
+        padding-left: 0;
+    }
+    to {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 510px) {
+    .hero {
+        &__container {
+            padding-top: 74px;
+        }
+        &__title {
+            font-size: 52px;
+        }
+        &__text {
+            font-weight: 500;
+        }
+        &__arrows {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1440px) {
+}

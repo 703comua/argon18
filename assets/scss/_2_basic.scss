@@ -2,9 +2,10 @@
 $basicColor: #1c1e21;
 $basicFontSize: 14px;
 
+$neonColor: #25b6d2;
 $blackColor: #212121;
 $darkgrayColor: #656565;
-$grayColor: #eee;
+$grayColor: #eceef2;
 $gray2Color: #aeaeae;
 $borderColor: #e9e9e9;
 
@@ -73,6 +74,9 @@ body {
 	}
 }
 
+.no-scroll {
+	overflow: hidden;
+}
 
 .ibg {
 	position: relative;

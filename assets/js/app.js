@@ -1,6 +1,10 @@
 "use strict";
 
 $(document).ready(function () {
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
     // slider-mainpage
     const photos__slides = new Swiper(".photos__slides", {
         // If we need pagination
@@ -43,4 +47,31 @@ $(document).ready(function () {
         // 	el: '.swiper-scrollbar',
         // },
     });
+
+    $('.header__menu-burger').on('click', function(){
+        $('.header__mob-menu').toggleClass('active');
+        $('body').toggleClass("no-scroll");
+        $('.backdrop').toggle();
+    });
+    $('.mob-menu__close').on('click', function(){
+        $('.header__mob-menu').toggleClass('active');
+        $('body').toggleClass("no-scroll");
+        $('.backdrop').toggle();
+    });
+    $('.backdrop').on('click', function(){
+        $('.header__mob-menu').removeClass('active');
+        $('body').removeClass("no-scroll");
+        $('.backdrop').hide();
+    });
+
+    $('.mob-menu-catalog__btn').on('click', function () {
+		let $thisArrow = $(this);
+		let $parentLi = $(this).parent();
+		// если список есть
+		if ($(this).next('ul').length == 1) {
+			$(this).next('ul').slideToggle();
+			// $prevLink.toggleClass('active');
+			$(this).parent('li').toggleClass('active');
+		}
+	});
 });
