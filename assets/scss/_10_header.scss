@@ -320,267 +320,268 @@
             justify-content: space-between;
             margin-bottom: 40px;
         }
-    }
-    /*-------------------*/
-    /*--- search-form ---*/
-    /*-------------------*/
-    .search-form {
-        @include flex();
-        position: relative;
-        margin-bottom: 40px;
-        &__input {
-            border-radius: 4px;
-            padding-left: 20px;
-            height: 56px;
-            width: 100%;
-            color: $blackColor;
-            border: 1px solid #e9e9e9;
-        }
-        &__btn {
-            border: 0;
-            font-size: 18px;
-            color: #fff;
-            padding: 1px 15px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 56px;
-            width: 60px;
-            background: #25b6d2;
-            border-radius: 0 4px 4px 0;
+
+        /*-------------------*/
+        /*--- search-form ---*/
+        /*-------------------*/
+        .search-form {
             @include flex();
+            position: relative;
+            margin-bottom: 40px;
+            &__input {
+                border-radius: 4px;
+                padding-left: 20px;
+                height: 56px;
+                width: 100%;
+                color: $blackColor;
+                border: 1px solid #e9e9e9;
+            }
+            &__btn {
+                border: 0;
+                font-size: 18px;
+                color: #fff;
+                padding: 1px 15px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 56px;
+                width: 60px;
+                background: #25b6d2;
+                border-radius: 0 4px 4px 0;
+                @include flex();
+                justify-content: center;
+                transition: 0.25s;
+                &:hover {
+                    background-color: $redColor;
+                }
+                &-icon {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .mob-menu-title-wrap {
+            @include flex();
+            justify-content: space-between;
+        }
+        .mob-menu-title {
+            font-size: 24px;
+            font-family: "Oswald", sans-serif;
+            font-weight: 500;
+        }
+        .show-all {
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-color: $neonColor;
+            @include flex();
+            transition: 0.5s;
             justify-content: center;
-            transition: 0.25s;
             &:hover {
                 background-color: $redColor;
+                .show-all__icon {
+                    transform: rotate(0deg);
+                }
             }
-            &-icon {
+            &__icon {
+                transform: rotate(-45deg);
+                transition: 0.5s;
                 fill: #fff;
             }
         }
-    }
+        /*------------------------*/
+        /*--- mob-menu-catalog ---*/
+        /*------------------------*/
+        .mob-menu-catalog {
+            font-size: 25px;
+            padding: 15px 0 0;
+            margin-bottom: 40px;
+            &__item {
+                position: relative;
+                border-top: 1px solid $grayColor;
 
-    .mob-menu-title-wrap {
-        @include flex();
-        justify-content: space-between;
-    }
-    .mob-menu-title {
-        font-size: 24px;
-        font-family: "Oswald", sans-serif;
-        font-weight: 500;
-    }
-    .show-all {
-        width: 40px;
-        height: 40px;
-        display: block;
-        background-color: $neonColor;
-        @include flex();
-        transition: 0.5s;
-        justify-content: center;
-        &:hover {
-            background-color: $redColor;
-            .show-all__icon {
-                transform: rotate(0deg);
-            }
-        }
-        &__icon {
-            transform: rotate(-45deg);
-            transition: 0.5s;
-            fill: #fff;
-        }
-    }
-    /*------------------------*/
-    /*--- mob-menu-catalog ---*/
-    /*------------------------*/
-    .mob-menu-catalog {
-        font-size: 25px;
-        padding: 15px 0 0;
-        margin-bottom: 40px;
-        &__item {
-            position: relative;
-            border-top: 1px solid $grayColor;
+                & > ul {
+                    display: none;
+                    // padding: 5px 0 10px;
+                    & > li {
+                        padding: 0 0 0 15px;
+                        border-top: 1px solid $grayColor;
 
-            & > ul {
-                display: none;
-                // padding: 5px 0 10px;
-                & > li {
-                    padding: 0 0 0 15px;
-                    border-top: 1px solid $grayColor;
-
-                    & > ul {
-                        display: none;
-                        // padding: 5px 0 10px;
-                        & > li {
-                            padding: 0 0 0 15px;
-                            border-top: 1px solid #eceef2;
+                        & > ul {
+                            display: none;
+                            // padding: 5px 0 10px;
+                            & > li {
+                                padding: 0 0 0 15px;
+                                border-top: 1px solid #eceef2;
+                            }
                         }
                     }
                 }
-            }
 
-            &.active {
-                > .mob-menu-catalog__btn > .mob-menu-catalog__btn-icon {
-                    transform: rotate(0deg);
+                &.active {
+                    > .mob-menu-catalog__btn > .mob-menu-catalog__btn-icon {
+                        transform: rotate(0deg);
+                    }
+                    & > ul {
+                        display: block;
+                    }
                 }
-                & > ul {
-                    display: block;
+            }
+            &__link {
+                font-size: 16px;
+                line-height: 1.5;
+                color: $blackColor;
+                display: block;
+                padding: 10px 0;
+                transition: all 0.2s ease 0s;
+                &:hover {
+                    color: $redColor;
                 }
             }
-        }
-        &__link {
-            font-size: 16px;
-            line-height: 1.5;
-            color: $blackColor;
-            display: block;
-            padding: 10px 0;
-            transition: all 0.2s ease 0s;
-            &:hover {
-                color: $redColor;
-            }
-        }
-        &__btn {
-            background: transparent;
-            border: none;
-            @include flex();
-            justify-content: center;
-            position: absolute;
-            right: 0;
-            top: 0px;
-            padding: 0;
-            width: 30px;
-            height: 44px;
-            &-icon {
-                transform: rotate(-90deg);
-                transition: 0.25s;
-            }
-        }
-    }
-
-    /*--------------------*/
-    /*--- new-products ---*/
-    /*--------------------*/
-    .new-products {
-        border-top: 1px solid $grayColor;
-        padding-top: 15px;
-        margin-top: 15px;
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-        &__item {
-            width: calc((100% - 15px) / 2);
-        }
-        &__link {
-            transition: 0.5s;
-
-            &:hover {
-                color: $redColor;
-            }
-        }
-        &__image {
-            transition: 0.5s;
-            margin-bottom: 10px;
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    /*---------------------*/
-    /*--- popular-pages ---*/
-    /*---------------------*/
-    .popular-pages {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px 20px;
-        border-top: 1px solid $grayColor;
-        padding-top: 15px;
-        margin-top: 15px;
-        margin-bottom: 40px;
-        &__item {
-        }
-        &__link {
-            background: #fff;
-            padding: 10px 20px;
-            display: inline-block;
-            border: 0;
-            font-weight: 500;
-            color: $neonColor;
-            border: 2px solid $neonColor;
-            transition: 0.5s;
-            border-radius: 30px;
-            position: relative;
-            z-index: 1;
-            &:before {
+            &__btn {
+                background: transparent;
+                border: none;
+                @include flex();
+                justify-content: center;
                 position: absolute;
-                content: "";
-                left: 0;
                 right: 0;
-                top: 0;
-                bottom: 0;
-                background: $neonColor;
-                color: #fff;
-                border: 2px solid #fff;
-                border-radius: 30px;
-                z-index: -1;
-                transform: scale(0);
-                transition: 0.5s;
-            }
-            &:hover {
-                color: #fff;
-                &:before {
-                    transform: scale(1);
+                top: 0px;
+                padding: 0;
+                width: 30px;
+                height: 44px;
+                &-icon {
+                    transform: rotate(-90deg);
+                    transition: 0.25s;
                 }
             }
         }
-    }
 
-    /*--------------*/
-    /*--- social ---*/
-    /*--------------*/
-    .socials {
-        border-top: 1px solid $grayColor;
-        padding-top: 15px;
-        margin-top: 15px;
-        @include flex();
-        gap: 20px;
-        &__link {
-            width: 40px;
-            height: 40px;
-            @include flex();
-            justify-content: center;
-            background: $neonColor;
-            border: 1px solid $neonColor;
-            border-radius: 30px;
-            transition: 0.5s;
-            position: relative;
-            z-index: 1;
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #fff;
-                transition: 0.5s;
-                z-index: -1;
-                border-radius: 30px;
-                transform: scale(0);
+        /*--------------------*/
+        /*--- new-products ---*/
+        /*--------------------*/
+        .new-products {
+            border-top: 1px solid $grayColor;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            &__item {
+                width: calc((100% - 15px) / 2);
             }
-            &:hover {
-                &:before {
-                    transform: scale(1);
-                    filter: hue-rotate(360deg);
+            &__link {
+                transition: 0.5s;
+
+                &:hover {
+                    color: $redColor;
                 }
-                .socials__icon {
-                    fill: $neonColor;
+            }
+            &__image {
+                transition: 0.5s;
+                margin-bottom: 10px;
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
-        &__icon {
-            transition: 0.5s;
-            fill: #fff;
+
+        /*---------------------*/
+        /*--- popular-pages ---*/
+        /*---------------------*/
+        .popular-pages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 20px;
+            border-top: 1px solid $grayColor;
+            padding-top: 15px;
+            margin-top: 15px;
+            margin-bottom: 40px;
+            &__item {
+            }
+            &__link {
+                background: #fff;
+                padding: 10px 20px;
+                display: inline-block;
+                border: 0;
+                font-weight: 500;
+                color: $neonColor;
+                border: 2px solid $neonColor;
+                transition: 0.5s;
+                border-radius: 30px;
+                position: relative;
+                z-index: 1;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: $neonColor;
+                    color: #fff;
+                    border: 2px solid #fff;
+                    border-radius: 30px;
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: 0.5s;
+                }
+                &:hover {
+                    color: #fff;
+                    &:before {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        /*--------------*/
+        /*--- social ---*/
+        /*--------------*/
+        .socials {
+            border-top: 1px solid $grayColor;
+            padding-top: 15px;
+            margin-top: 15px;
+            @include flex();
+            gap: 20px;
+            &__link {
+                width: 40px;
+                height: 40px;
+                @include flex();
+                justify-content: center;
+                background: $neonColor;
+                border: 1px solid $neonColor;
+                border-radius: 30px;
+                transition: 0.5s;
+                position: relative;
+                z-index: 1;
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    transition: 0.5s;
+                    z-index: -1;
+                    border-radius: 30px;
+                    transform: scale(0);
+                }
+                &:hover {
+                    &:before {
+                        transform: scale(1);
+                        filter: hue-rotate(360deg);
+                    }
+                    .socials__icon {
+                        fill: $neonColor;
+                    }
+                }
+            }
+            &__icon {
+                transition: 0.5s;
+                fill: #fff;
+            }
         }
     }
 }
@@ -681,9 +682,6 @@
         &__menu {
             top: 48px;
         }
-        .main-menu {
-            display: none;
-        }
     }
 }
 @media screen and (min-width: 992px) {
@@ -706,6 +704,14 @@
             }
             &-list-link {
                 padding: 40px 10px;
+            }
+        }
+        /*----------------*/
+        /*--- Mob-menu ---*/
+        /*----------------*/
+        .mob-menu {
+            .main-menu {
+                display: none;
             }
         }
     }
