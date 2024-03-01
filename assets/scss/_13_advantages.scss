@@ -10,7 +10,7 @@
         border-radius: 4px;
         filter: drop-shadow(0 0 5.5px rgba(14, 19, 25, 0.07));
         background-color: #ffffff;
-        padding: 50px 40px 40px;
+        padding: 30px;
         width: 100%;
         &:hover {
             .advantages__box{
@@ -166,6 +166,20 @@
     .advantages {
         &__item {
             width: calc((100% - 24px) / 2);
+            padding: 40px;
+        }
+    }
+    .section-title {
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        color: $blackColor;
+        font-weight: 500;
+    
+        &__top {
+            font-size: 22px;
+        }
+        &__text {
+            font-size: 40px;
         }
     }
 }

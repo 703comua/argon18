@@ -23,10 +23,36 @@
     &__menu {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 2;
         width: 100%;
+
+        &.sticky {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(0%);
+
+            filter: drop-shadow(0 0 17.5px rgba(156, 156, 156, 0.2));
+            box-shadow: 0 2px 5px -2px rgba(254, 254, 254, 0.1);
+            .header__menu-list-link {
+                padding: 25px 20px;
+            }
+            .header__menu-container {
+                padding: 0;
+            }
+            .header__menu-logo-icon {
+                width: 120px;
+            }
+        }
+        &.slide-down {
+            animation: slide-down 0.3s;
+        }
+        &.slide-up {
+            animation: slide-up 0.3s;
+            animation-fill-mode: none;
+            animation-fill-mode: forwards;
+        }
         &-container {
             max-width: 100%;
         }
@@ -37,7 +63,8 @@
             border-radius: 0 0 4px 4px;
             @include flex();
             padding: 8px 20px;
-            box-shadow: 0 2px 5px -2px rgba(254, 254, 254, 0.1);
+            // box-shadow: 0 2px 5px -2px rgba(254, 254, 254, 0.1);
+            box-shadow: 0px -1px 0px 0px #eceef2 inset;
         }
         &-nav {
             @include flex();
@@ -586,6 +613,24 @@
     }
 }
 
+@keyframes slide-down {
+    from {
+        transform:translateY(-100%);
+   }
+    to {
+        transform:translateY(0%);
+   }
+}
+
+@keyframes slide-up {
+    from {
+        transform:translateY(0%);
+   }
+    to {
+        transform:translateY(-100%);
+   }
+}
+
 @media screen and (min-width: 360px) {
 }
 @media screen and (max-width: 540px) {
@@ -690,7 +735,8 @@
         /*--- Menu ---*/
         /*------------*/
         &__menu {
-            width: 992px;
+            // width: 992px;
+            // width: 100%;
             &-inner {
                 padding: 0 20px;
             }
@@ -703,7 +749,11 @@
                 @include flex();
             }
             &-list-link {
-                padding: 40px 10px;
+                padding: 30px 10px;
+            }
+            &-container {
+                padding-left: calc((100% - 992px + 30px) / 2);
+                padding-right: calc((100% - 992px + 30px) / 2);
             }
         }
         /*----------------*/
@@ -730,12 +780,17 @@
         /*--- Menu ---*/
         /*------------*/
         &__menu {
-            width: 1280px;
+            // width: 1280px;
+            // width: 100%;
             &-inner {
                 padding: 0 40px;
             }
             &-list-link {
-                padding: 40px 20px;
+                padding: 30px 20px;
+            }
+            &-container {
+                padding-left: calc((100% - 1280px + 30px) / 2);
+                padding-right: calc((100% - 1280px + 30px) / 2);
             }
         }
     }
@@ -746,7 +801,12 @@
         /*--- Menu ---*/
         /*------------*/
         &__menu {
-            width: 1440px;
+            // width: 1440px;
+            // width: 100%;
+            &-container {
+                padding-left: calc((100% - 1440px + 30px) / 2);
+                padding-right: calc((100% - 1440px + 30px) / 2);
+            }
         }
     }
 }
