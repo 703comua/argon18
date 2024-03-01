@@ -36,11 +36,11 @@ $(document).ready(function () {
         //     },
         // },
 
-		// Navigation arrows
-		navigation: {
-			nextEl: ".swiper-button-next-slide",
-			prevEl: ".swiper-button-prev-slide",
-		},
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide",
+            prevEl: ".swiper-button-prev-slide",
+        },
 
         // And if we need scrollbar
         // scrollbar: {
@@ -48,65 +48,74 @@ $(document).ready(function () {
         // },
     });
 
-    $('.header__menu-burger').on('click', function(){
-        $('.header__mob-menu').toggleClass('active');
-        $('body').toggleClass("no-scroll");
-        $('.backdrop').toggle();
+    $(".header__menu-burger").on("click", function () {
+        $(".header__mob-menu").toggleClass("active");
+        $("body").toggleClass("no-scroll");
+        $(".backdrop").toggle();
     });
-    $('.mob-menu__close').on('click', function(){
-        $('.header__mob-menu').toggleClass('active');
-        $('body').toggleClass("no-scroll");
-        $('.backdrop').toggle();
+    $(".mob-menu__close").on("click", function () {
+        $(".header__mob-menu").toggleClass("active");
+        $("body").toggleClass("no-scroll");
+        $(".backdrop").toggle();
     });
-    $('.backdrop').on('click', function(){
-        $('.header__mob-menu').removeClass('active');
-        $('body').removeClass("no-scroll");
-        $('.backdrop').hide();
+    $(".backdrop").on("click", function () {
+        $(".header__mob-menu").removeClass("active");
+        $("body").removeClass("no-scroll");
+        $(".backdrop").hide();
     });
 
-    $('.mob-menu-catalog__btn').on('click', function () {
-		let $thisArrow = $(this);
-		let $parentLi = $(this).parent();
-		// если список есть
-		if ($(this).next('ul').length == 1) {
-			$(this).next('ul').slideToggle();
-			// $prevLink.toggleClass('active');
-			$(this).parent('li').toggleClass('active');
-		}
-	});
+    $(".mob-menu-catalog__btn").on("click", function () {
+        let $thisArrow = $(this);
+        let $parentLi = $(this).parent();
+        // если список есть
+        if ($(this).next("ul").length == 1) {
+            $(this).next("ul").slideToggle();
+            // $prevLink.toggleClass('active');
+            $(this).parent("li").toggleClass("active");
+        }
+    });
 
     // Fixed Nav
-	var lastScrollTop = 0;
-	$(window).on('scroll', function () {
-		var wScroll = $(this).scrollTop();
-		if (wScroll > $('.header').height() + 74) {
-            $('.header__menu').addClass('sticky');
-		} else {
-            $('.header__menu').removeClass('sticky');
+    var lastScrollTop = 0;
+    $(window).on("scroll", function () {
+        var wScroll = $(this).scrollTop();
+        if (wScroll > $(".header").height() + 74) {
+            $(".header__menu").addClass("sticky");
+        } else {
+            $(".header__menu").removeClass("sticky");
         }
         if (wScroll > 400) {
-			if (wScroll < lastScrollTop) {
-				$('.header__menu').removeClass('slide-up').addClass('slide-down');
-			} else {
-				$('.header__menu').removeClass('slide-down').addClass('slide-up');
-			}
-		}
-		lastScrollTop = wScroll;
+            if (wScroll < lastScrollTop) {
+                $(".header__menu").removeClass("slide-up").addClass("slide-down");
+            } else {
+                $(".header__menu").removeClass("slide-down").addClass("slide-up");
+            }
+        }
+        lastScrollTop = wScroll;
 
-		// up-btn
-		if ($(this).scrollTop() > 400) {
-			// $('.up').fadeIn();
-			$('.up').addClass('active');
-		} else {
-			// $('.up').fadeOut(400);
-			$('.up').removeClass('active');
-		}
-		// if($(this).scrollTop() > 120) {
-		// 	$('.search').addClass('fixed');
-		// } else {
-		// 	$('.search').removeClass('fixed');
-		// }
+        // up-btn
+        if ($(this).scrollTop() > 400) {
+            // $('.up').fadeIn();
+            $(".up").addClass("active");
+        } else {
+            // $('.up').fadeOut(400);
+            $(".up").removeClass("active");
+        }
+        // if($(this).scrollTop() > 120) {
+        // 	$('.search').addClass('fixed');
+        // } else {
+        // 	$('.search').removeClass('fixed');
+        // }
+    });
 
-	});
-
+    // up btn
+    $(".up").click(function () {
+        $("body, html").animate(
+            {
+                scrollTop: 0,
+            },
+            800
+        );
+        return false;
+    });
 });

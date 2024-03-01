@@ -44,6 +44,9 @@
             .header__menu-logo-icon {
                 width: 120px;
             }
+            .header__menu-list-submenu {
+                top: 64px;
+            }
         }
         &.slide-down {
             animation: slide-down 0.3s;
@@ -154,7 +157,7 @@
             }
             &-submenu {
                 position: absolute;
-                top: 94px;
+                top: 74px;
                 left: 0;
                 width: 205px;
                 background: #fff;

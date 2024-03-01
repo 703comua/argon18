@@ -18,7 +18,11 @@
         <link rel="stylesheet" href="./assets/css/app.css" />
     </head>
     <body>
-        
+        <button class="up" type="button">
+            <svg class="icon" width="12" height="12">
+                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+            </svg>
+        </button>
         <div class="wrapper">
             <header class="header">
                 <div class="header__top">
@@ -40,7 +44,7 @@
                                     </span>
                                 </li>
                                 <li class="header__top-address-item">
-                                    <a class="header__top-address-link" href="mailto:info@devstudio.com">
+                                    <a class="header__top-address-link" href="mailto:sales@argon18.ru">
                                         <svg class="header__top-address-icon" width="16" height="16">
                                             <use href="./assets/svg/icons.svg#icon-email"></use>
                                         </svg>
@@ -475,8 +479,10 @@
             </section>
 
             <main class="page">
+                <!-- photos -->
                 <section class="page__photos photos">
                     <div class="photos__container container">
+                        <h2 class="photos__title visually-hidden">Gallery</h2>
                         <div class="photos__slides swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
@@ -487,7 +493,7 @@
                                 </div>
                                 <div class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
-                                        <img class="photos__slides-img" src="./assets/img/slides/slide2.jpg" alt="" />
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide8.jpg" alt="" />
                                     </a>
                                 </div>
                                 <div class="swiper-slide photos__slides-item">
@@ -512,7 +518,7 @@
                                 </div>
                                 <div class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
-                                        <img class="photos__slides-img" src="./assets/img/slides/slide8.jpg" alt="" />
+                                        <img class="photos__slides-img" src="./assets/img/slides/slide2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -555,6 +561,7 @@
                     </div>
                 </section>
 
+                <!-- advantages -->
                 <section class="page__advantages advantages">
                     <div class="advantages__container container">
                         <div class="advantages__title section-title">
@@ -608,37 +615,157 @@
                         </ul>
                     </div>
                 </section>
+
+                <!-- catalog -->
+                <section class="page__catalog catalog">
+                    <div class="catalog__container container">
+                        <!-- <h2 class="catalog__title visually-hidden">Каталог</h2> -->
+
+                        <div class="advantages__title section-title">
+                            <p class="section-title__top">
+                                Лучшие аксессуары
+                                <span></span>
+                                <span></span>
+                            </p>
+                            <h2 class="section-title__text">Каталог товара интернет-магазина</h2>
+                        </div>
+
+                        <ul class="catalog__list">
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/5.jpg" alt="Велосипеды" />
+                                    </div>
+                                    <h3 class="catalog__name">Велосипеды</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/4.jpg" alt="Велосипеды" />
+                                    </div>
+                                    <h3 class="catalog__name">Седла</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/3.jpg" alt="Рамы" />
+                                    </div>
+                                    <h3 class="catalog__name">Рамы</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/2.jpg" alt="Обувь" />
+                                    </div>
+                                    <h3 class="catalog__name">Обувь</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/1.jpg" alt="Шлемы" />
+                                    </div>
+                                    <h3 class="catalog__name">Шлемы</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/7.jpg" alt="Товары для триатлона" />
+                                    </div>
+                                    <h3 class="catalog__name">Товары для триатлона</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/6.jpg" alt="Велотренажеры" />
+                                    </div>
+                                    <h3 class="catalog__name">Велотренажеры</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/8.jpg" alt="Комплектующие" />
+                                    </div>
+                                    <h3 class="catalog__name">Комплектующие</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/9.jpg" alt="Защита" />
+                                    </div>
+                                    <h3 class="catalog__name">Защита</h3>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <div class="catalog__box">
+                                        <img class="catalog__image" src="./assets/img/catalog/10.jpg" alt="Колеса" />
+                                    </div>
+                                    <h3 class="catalog__name">Колеса</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </main>
 
             <div class="footer">
-                <div class="container">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit quos reiciendis nihil, vel dignissimos fugiat
-                        placeat nostrum commodi fuga rerum distinctio doloremque enim provident itaque saepe? Id, excepturi nostrum?
+                <div class="footer__container container">
+                    <div class="footer__links">
+
+                    </div>
+                    <div class="footer__contacts contacts">
+                        <ul class="contacts__list">
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="#">
+                                    <div class="contacts__box">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./assets/svg/icons.svg#icon-address"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts__content">
+                                        <h3 class="contacts__head">Карта проезда</h3>
+                                        <p class="contacts__text">Москва, ул.Лужники 24с4 </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="mailto:sales@argon18.ru">
+                                    <div class="contacts__box">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./assets/svg/icons.svg#icon-email"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts__content">
+                                        <h3 class="contacts__head">E-mail</h3>
+                                        <p class="contacts__text">sales@argon18.ru</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="tel:+79857177700">
+                                    <div class="contacts__box">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./assets/svg/icons.svg#icon-phone"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts__content">
+                                        <h3 class="contacts__head">Phone</h3>
+                                        <p class="contacts__text">+7(985) 717-77-00 </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footer__copyrights">
+                        © Copyright 2023 Pedal ways
                     </p>
                 </div>
             </div>

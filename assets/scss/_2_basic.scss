@@ -91,45 +91,27 @@ body {
 	}
 }
 
+.visually-hidden {
+	display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 
 /* ------------------------------------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 120%;
-}
-
-h1 {
-	font-size: 34px;
-}
-
-.h1 {
-	padding: 40px 0;
-	font-size: 28px;
-}
-
-h2 {
-	font-size: 28px;
-}
-
-h3 {
-	font-size: 22px;
-}
-
-h4 {
-	font-size: 20px;
-}
-
 a {
 	outline: none;
 }
 
-
 button {
-	cursor: pointer;
+	cursor: pointer; 
 }
 
 p,
@@ -769,22 +751,21 @@ img {
 }
 
 .up {
-	bottom: 10px;
-	left: 10px;
+	bottom: 20px;
+	left: 20px;
 	position: fixed;
 	@include flex();
-	opacity: 0;
 	visibility: hidden;
 	justify-content: center;
-	width: 50px;
-	height: 50px;
-	background-color: #ffffff;
+	width: 46px;
+	height: 46px;
+	background-color: $neonColor;
 	color: #fff;
 	z-index: 99999;
 	cursor: pointer;
 	transition-duration: 0.3s;
 	border-radius: 50%;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid $neonColor;
 	opacity: 0.5;
 
 	&.active {
@@ -796,8 +777,8 @@ img {
 	}
 
 	&:hover {
-		background: $greenColor;
-		border: 1px solid $greenColor;
+		background: $neonColor;
+		border: 1px solid $neonColor;
 
 		.icon {
 			fill: #FFFFFF;
@@ -805,10 +786,8 @@ img {
 	}
 
 	.icon {
-		transform: rotate(-90deg);
-		fill: $basicColor;
-		width: 20px;
-		height: 20px;
+		transform: rotate(180deg);
+		fill: #FFFFFF;
 	}
 }
 
