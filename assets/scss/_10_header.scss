@@ -233,34 +233,7 @@
             }
         }
         &-callback {
-            @include flex();
-            background: $redColor;
-            border: 1px solid $redColor;
-            border-radius: 5px;
-            padding: 12px 56px 12px 28px;
-            position: relative;
-            color: #fff;
-            text-transform: uppercase;
-            transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
             margin-left: 30px;
-            &-icon {
-                fill: #fff;
-                margin-left: 8px;
-                transition: fill 250ms ease-in-out, right 250ms ease-in-out;
-                position: absolute;
-                right: 28px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:hover,
-            &:focus {
-                background-color: #fff;
-                color: $redColor;
-                .header__menu-callback-icon {
-                    fill: $redColor;
-                    right: 22px;
-                }
-            }
         }
         &-user {
             @include flex();
@@ -399,26 +372,7 @@
             font-family: "Oswald", sans-serif;
             font-weight: 500;
         }
-        .show-all {
-            width: 40px;
-            height: 40px;
-            display: block;
-            background-color: $neonColor;
-            @include flex();
-            transition: 0.5s;
-            justify-content: center;
-            &:hover {
-                background-color: $redColor;
-                .show-all__icon {
-                    transform: rotate(0deg);
-                }
-            }
-            &__icon {
-                transform: rotate(-45deg);
-                transition: 0.5s;
-                fill: #fff;
-            }
-        }
+
         /*------------------------*/
         /*--- mob-menu-catalog ---*/
         /*------------------------*/
