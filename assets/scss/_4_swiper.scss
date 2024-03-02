@@ -6,7 +6,9 @@
     .swiper-slide {
         width: auto;
     }
-
+    .swiper-button-disabled {
+        opacity: .5;
+    }
     .swiper-pagination {
         bottom: 16px;
     }
@@ -32,8 +34,8 @@
         z-index: 10;
         top: 50%;
         transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
         background-color: #dfebf7;
         border: 1px solid #dfebf7;
@@ -45,11 +47,20 @@
             fill: $basicColor;
             transition: fill 250ms ease-in-out;
         }
-        &:hover {
+        &:hover, &:focus {
             background-color: $redColor;
             border-color: $redColor;
             .icon {
                 fill: #fff;
+            }
+        }
+
+        &.transparent {
+            background-color: transparent;
+            border-color: transparent;
+            &:hover,&:focus {
+                background-color: $neonColor;
+                border-color: $neonColor;
             }
         }
     }

@@ -6,7 +6,7 @@ $(document).ready(function () {
     });
 
     // slider-mainpage
-    const photos__slides = new Swiper(".photos__slides", {
+    const photosSlides = new Swiper(".photos__slides", {
         // If we need pagination
         pagination: {
             el: ".swiper-pagination",
@@ -22,7 +22,7 @@ $(document).ready(function () {
         // loopedSlides: 1,
         touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
         // slidesPerView: 'auto',
-        centeredSlides: true,
+        // centeredSlides: true,
 
         // Responsive breakpoints
         // breakpoints: {
@@ -40,6 +40,54 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next-slide",
             prevEl: ".swiper-button-prev-slide",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    // лента брендов
+    const brandsSlides = new Swiper(".brands__slides", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        slidesPerView: 6,
+        slidesPerGroup: 2,
+        // loop: true, // безконечный слайдер
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: true, // отключить после ручной прокрутки
+            pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 6,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide.transparent",
+            prevEl: ".swiper-button-prev-slide.transparent",
         },
 
         // And if we need scrollbar
