@@ -228,18 +228,18 @@
 
 @media screen and (min-width: 992px) {
     .footer {
-
+        &__column1 {
+            width: calc(25% - 12px);
+        }
+        &__column2 {
+            width: calc(16.666% - 24px);
+        }
     }
 }
 
 @media screen and (min-width: 1280px) {
     .footer {
-        &__column1 {
-            width: calc(25% - 48px);
-        }
-        &__column2 {
-            width: 16.667%;
-        }
+
         .contacts {
             &__list {
             }
