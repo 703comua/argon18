@@ -96,6 +96,162 @@ $(document).ready(function () {
         // },
     });
 
+    // лента топ продаж
+    const topProducts = new Swiper(".top-products", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        slidesPerView: 4,
+        slidesPerGroup: 2,
+        // loop: true, // безконечный слайдер
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: true, // отключить после ручной прокрутки
+        //     pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1280px
+            1280: {
+                slidesPerView: 5,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide",
+            prevEl: ".swiper-button-prev-slide",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    // лента новинок
+    const newsProducts = new Swiper(".news-products", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        slidesPerView: 4,
+        slidesPerGroup: 2,
+        // loop: true, // безконечный слайдер
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: true, // отключить после ручной прокрутки
+        //     pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1280px
+            1280: {
+                slidesPerView: 5,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide",
+            prevEl: ".swiper-button-prev-slide",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    // лента новинок
+    const salesProducts = new Swiper(".sales-products", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        slidesPerView: 4,
+        slidesPerGroup: 2,
+        // loop: true, // безконечный слайдер
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: true, // отключить после ручной прокрутки
+        //     pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1280px
+            1280: {
+                slidesPerView: 5,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide",
+            prevEl: ".swiper-button-prev-slide",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
     $(".header__menu-burger").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
@@ -132,7 +288,7 @@ $(document).ready(function () {
         } else {
             $(".header__menu").removeClass("sticky");
         }
-        if (wScroll > 400) {
+        if (wScroll > 450) {
             if (wScroll < lastScrollTop) {
                 $(".header__menu").removeClass("slide-up").addClass("slide-down");
             } else {

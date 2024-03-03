@@ -36,7 +36,7 @@
                         <address class="header__top-address">
                             <ul class="header__top-address-list">
                                 <li class="header__top-address-item">
-                                    <span class="header__top-address-link" href="mailto:info@devstudio.com">
+                                    <span class="header__top-address-link">
                                         <svg class="header__top-address-icon" width="16" height="16">
                                             <use href="./assets/svg/icons.svg#icon-address"></use>
                                         </svg>
@@ -141,7 +141,7 @@
                                     <use href="./assets/svg/icons.svg#icon-burger2"></use>
                                 </svg>
                             </button>
-                            <button class="header__menu-callback btn" data-tooltip="Заказать обратный звонок" data-flow="down">
+                            <button class="header__menu-callback btn" data-tooltip="Обратный звонок" data-flow="down">
                                 Callback
                                 <svg class="icon" width="16" height="16">
                                     <use href="./assets/svg/icons.svg#icon-callback"></use>
@@ -336,14 +336,14 @@
                     <div class="mob-menu-title-wrap">
                         <h3 class="mob-menu-title">Новые поступления</h3>
                         <a class="show-all" href="#">
-                            <svg class="show-all__icon" width="24" height="24">
+                            <svg class="icon" width="24" height="24">
                                 <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
                     </div>
                     <ul class="new-products">
                         <li class="new-products__item">
-                            <a class="new-products__link" href="#" class="new-products__link">
+                            <a class="new-products__link" href="#">
                                 <img class="new-products__image" src="./assets/img/products/1.jpg" alt="" />
                                 E-119 Tri+ Disc
                             </a>
@@ -439,46 +439,47 @@
                 </div>
             </header>
 
-            <section class="hero">
-                <div class="hero__container container">
-                    <h1 class="hero__title">argon 18 в России!</h1>
-                    <p class="hero__text">Мы единственный официальный дистрибьютор ARGON 18 в России!</p>
-                    <div class="hero__play-video">
-                        <ul class="hero__arrows">
-                            <li>
-                                <svg class="hero__arrows-icon" class="header__menu-list-icon" width="20" height="20">
-                                    <use href="./assets/svg/icons.svg#icon-triangle"></use>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg class="hero__arrows-icon" class="header__menu-list-icon" width="20" height="20">
-                                    <use href="./assets/svg/icons.svg#icon-triangle"></use>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg class="hero__arrows-icon" class="header__menu-list-icon" width="20" height="20">
-                                    <use href="./assets/svg/icons.svg#icon-triangle"></use>
-                                </svg>
-                            </li>
-                        </ul>
-                        <button
-                            class="hero__play-btn"
-                            type="button"
-                            data-src="./assets/video/Aero-Testing-E-119-Tri-Disc-with-Michelle-Vesterby-Argon-18-720p.mp4"
-                            data-fancybox="gallery"
-                        >
-                            <span class="hero__play-btn-inner">
-                                <svg class="hero__play-btn-icon" class="header__menu-list-icon" width="24" height="24">
-                                    <use href="./assets/svg/icons.svg#icon-play"></use>
-                                </svg>
-                            </span>
-                            Play video
-                        </button>
-                    </div>
-                </div>
-            </section>
-
             <main class="page">
+                <!-- hero -->
+                <section class="page__hero hero">
+                    <div class="hero__container container">
+                        <h1 class="hero__title">argon 18 в России!</h1>
+                        <p class="hero__text">Мы единственный официальный дистрибьютор ARGON 18 в России!</p>
+                        <div class="hero__play-video">
+                            <ul class="hero__arrows">
+                                <li>
+                                    <svg class="hero__arrows-icon" width="20" height="20">
+                                        <use href="./assets/svg/icons.svg#icon-triangle"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="hero__arrows-icon" width="20" height="20">
+                                        <use href="./assets/svg/icons.svg#icon-triangle"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="hero__arrows-icon" width="20" height="20">
+                                        <use href="./assets/svg/icons.svg#icon-triangle"></use>
+                                    </svg>
+                                </li>
+                            </ul>
+                            <button
+                                class="hero__play-btn"
+                                type="button"
+                                data-src="./assets/video/Aero-Testing-E-119-Tri-Disc-with-Michelle-Vesterby-Argon-18-720p.mp4"
+                                data-fancybox="gallery"
+                            >
+                                <span class="hero__play-btn-inner">
+                                    <svg class="hero__play-btn-icon" width="24" height="24">
+                                        <use href="./assets/svg/icons.svg#icon-play"></use>
+                                    </svg>
+                                </span>
+                                Play video
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- photos -->
                 <section class="page__photos photos">
                     <div class="photos__container container">
@@ -564,6 +565,7 @@
                 <!-- brands -->
                 <section class="page__brands brands">
                     <div class="brands__container container">
+                        <h2 class="photos__title visually-hidden">Популярные бренды</h2>
                         <div class="brands__slides swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
@@ -650,7 +652,6 @@
                                     <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
                                 </svg>
                             </div>
-
                         </div>
                     </div>
                 </section>
@@ -707,6 +708,1854 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <!-- tape-top -->
+                <section class="page__tape tape tape-top">
+                    <div class="tape__container container">
+                        <div class="advantages__title section-title">
+                            <h2 class="section-title__text">
+                                Популярное
+                                <a class="show-all" href="#">
+                                    <svg class="icon" width="24" height="24">
+                                        <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="tape__list swiper top-products">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 2 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 3 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 4 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 5 -->
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- tape-new -->
+                <section class="page__tape tape tape-news">
+                    <div class="tape__container container">
+                        <div class="advantages__title section-title">
+                            <h2 class="section-title__text">
+                                Новинки
+                                <a class="show-all" href="#">
+                                    <svg class="icon" width="24" height="24">
+                                        <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="tape__list swiper news-products">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 2 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 3 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 4 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 5 -->
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- tape-sales -->
+                <section class="page__tape tape tape-sales">
+                    <div class="tape__container container">
+                        <div class="advantages__title section-title">
+                            <h2 class="section-title__text">
+                                Распродажа
+                                <a class="show-all" href="#">
+                                    <svg class="icon" width="24" height="24">
+                                        <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="tape__list swiper sales-products">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 2 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 3 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 4 -->
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- 5 -->
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_sale">Распродажа</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/04/e-119-tri-plus-disc-3-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-strike">₽750.000</span>
+                                        <span class="product-block__price-current">₽659.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> E-119 Tri+ Disc </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span> Написать отзыв </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_top">Топ продаж</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/5608.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors"></ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">433.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-119 Tri+</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-1">Есть в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers">
+                                            <li class="stickers__item is_new">Новинка</li>
+                                        </ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/10294.970-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽294.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">E-117 Tri</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available available-2">Уточнить наличие</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/gallium-cs-disc-322a-rival-etap-side-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽242.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#">Gallium CS Disc</a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review with-rating" href="#">
+                                                <div class="product-block__stars stars">
+                                                    <div class="stars__active w70"></div>
+                                                </div>
+                                                <span>
+                                                    <svg class="icon" width="17" height="17">
+                                                        <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                    </svg>
+                                                    2
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart">
+                                            <button class="product-block__cart-btn" type="button" data-tooltip="В корзину" data-flow="left">
+                                                <svg class="icon" width="20" height="20">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="product-block swiper-slide available-3">
+                                    <p class="product-block__meta">
+                                        <span class="product-block__id">Код товара: 2054</span>
+                                        <span class="product-block__available">Нет в наличии</span>
+                                    </p>
+                                    <a class="product-block__link" href="#">
+                                        <ul class="product-block__stickers stickers"></ul>
+                                        <img
+                                            class="product-block__image"
+                                            src="https://argon18.ru/wp-content/uploads/2022/05/Electron-Pro-Track-Cycling-Bike-Argon-18-600x400.jpg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <ul class="product-block__colors colors">
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(0, 0, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link active" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 51, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(51, 153, 0)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 153, 255)"></span>
+                                            </a>
+                                        </li>
+                                        <li class="colors__item">
+                                            <a class="colors__link" href="#">
+                                                <span class="colors__content" style="background-color: rgb(255, 255, 0)"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="product-block__price">
+                                        <span class="product-block__price-current">₽770.000</span>
+                                    </p>
+                                    <a class="product-block__name" href="#"> Electron Pro Rio Sprint/Pursuit </a>
+                                    <div class="product-block__box">
+                                        <div class="product-block__reviews reviews">
+                                            <a class="reviews__make-review" href="#">
+                                                <svg class="icon" width="17" height="17">
+                                                    <use xlink:href="./assets/svg/icons.svg#icon-make-review"></use>
+                                                </svg>
+                                                <span>Написать отзыв</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-block__cart"></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next-slide">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -808,9 +2657,121 @@
                         </ul>
                     </div>
                 </section>
+
+                <!-- blog -->
+                <section class="page__blog blog">
+                    <div class="blog__container container">
+                        <div class="advantages__title section-title">
+                            <p class="section-title__top">
+                                Наш блог
+                                <span></span>
+                                <span></span>
+                            </p>
+                            <h2 class="section-title__text">Последние статьи и новости</h2>
+                        </div>
+                        <ul class="blog__list">
+                            <li class="blog__item">
+                                <a class="blog__box" href="#">
+                                    <img class="blog__box-image" src="./assets/img/blog/1.jpg" alt="" />
+                                </a>
+                                <div class="blog__data">
+                                    <h3 class="blog__title">
+                                        <a class="blog__title-link" href="#"> The Exclusive Cycling Events in This Month and Next </a>
+                                    </h3>
+                                    <p class="blog__description">
+                                        Proin faucibus nec mauris a sodales, sed elementum Fusce sodales augue a accumsan.
+                                    </p>
+                                </div>
+                                <div class="blog__meta">
+                                    <time class="blog__date" datetime="2015-03-12">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-date"></use>
+                                        </svg>
+                                        Декабрь 20, 2023
+                                    </time>
+                                    <p class="blog__reviews">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-comments"></use>
+                                        </svg>
+                                        (2)&nbsp;<span class="blog__reviews-text">Комментарий</span>
+                                    </p>
+                                    <a class="blog__link-row show-all" href="#">
+                                        <svg class="icon" width="24" height="24">
+                                            <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="blog__item">
+                                <a class="blog__box" href="#">
+                                    <img class="blog__box-image" src="./assets/img/blog/2.jpg" alt="" />
+                                </a>
+                                <div class="blog__data">
+                                    <h3 class="blog__title">
+                                        <a class="blog__title-link" href="#"> Step-By-Step Cycling Riding Plan For Success </a>
+                                    </h3>
+                                    <p class="blog__description">
+                                        Proin faucibus nec mauris a sodales, sed elementum Fusce sodales augue a accumsan.
+                                    </p>
+                                </div>
+                                <div class="blog__meta">
+                                    <time class="blog__date" datetime="2015-03-12">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-date"></use>
+                                        </svg>
+                                        Декабрь 20, 2023
+                                    </time>
+                                    <p class="blog__reviews">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-comments"></use>
+                                        </svg>
+                                        (2)&nbsp;<span class="blog__reviews-text">Комментарий</span>
+                                    </p>
+                                    <a class="blog__link-row show-all" href="#">
+                                        <svg class="icon" width="24" height="24">
+                                            <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="blog__item">
+                                <a class="blog__box" href="#">
+                                    <img class="blog__box-image" src="./assets/img/blog/3.jpg" alt="" />
+                                </a>
+                                <div class="blog__data">
+                                    <h3 class="blog__title">
+                                        <a class="blog__title-link" href="#"> Reliving the Excitement of Last Year's Photo Sessions </a>
+                                    </h3>
+                                    <p class="blog__description">
+                                        Proin faucibus nec mauris a sodales, sed elementum Fusce sodales augue a accumsan.
+                                    </p>
+                                </div>
+                                <div class="blog__meta">
+                                    <time class="blog__date" datetime="2015-03-12">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-date"></use>
+                                        </svg>
+                                        Декабрь 20, 2023
+                                    </time>
+                                    <p class="blog__reviews">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-comments"></use>
+                                        </svg>
+                                        (2)&nbsp;<span class="blog__reviews-text">Комментарий</span>
+                                    </p>
+                                    <a class="blog__link-row show-all" href="#">
+                                        <svg class="icon" width="24" height="24">
+                                            <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </main>
 
-            <div class="footer">
+            <footer class="footer">
                 <div class="footer__container container">
                     <div class="footer__links">
                         <div class="footer__column1">
@@ -903,7 +2864,7 @@
                                     </a>
                                 </li>
                                 <li class="footer__column2-item pt30">
-                                    <button class="footer__column2-btn btn" type="button">
+                                    <button class="footer__column2-btn btn btn-neon-hover" type="button">
                                         Директору
                                         <svg class="icon" width="20" height="20">
                                             <use href="./assets/svg/icons.svg#icon-write"></use>
@@ -1027,7 +2988,7 @@
                                     <form class="subscribe__form" action="#">
                                         <input class="subscribe__input" type="email" placeholder="E-mail" required />
                                         <button class="subscribe__btn show-all" type="submit">
-                                            <svg class="show-all__icon" width="24" height="24">
+                                            <svg class="icon" width="24" height="24">
                                                 <use href="./assets/svg/icons.svg#icon-arrow-right"></use>
                                             </svg>
                                         </button>
@@ -1082,7 +3043,7 @@
                     </div>
                     <p class="footer__copyrights">© Copyright 2023 Pedals hub</p>
                 </div>
-            </div>
+            </footer>
         </div>
 
         <div class="backdrop"></div>
