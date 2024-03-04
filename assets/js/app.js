@@ -262,6 +262,11 @@ $(document).ready(function () {
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
+    $(".mob-menu__callback-btn").on("click", function () {
+        $(".header__mob-menu").toggleClass("active");
+        $("body").toggleClass("no-scroll");
+        $(".backdrop").toggle();
+    });
     $(".backdrop").on("click", function () {
         $(".header__mob-menu").removeClass("active");
         $("body").removeClass("no-scroll");

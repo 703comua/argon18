@@ -1,7 +1,7 @@
 .page {
     flex: 1 1 auto;
     // margin-bottom: 40px;
-    
+
     &__photos {
         padding: 20px 0 40px;
     }
@@ -10,7 +10,7 @@
         padding-bottom: 40px;
     }
 
-    &__advantages{
+    &__advantages {
         padding: 40px 0;
     }
 
@@ -18,19 +18,22 @@
         padding: 40px 0;
     }
 
-    &__catalog{
+    &__catalog {
         padding: 40px 0;
     }
 
-    &__blog{
+    &__blog {
         padding: 80px 0;
-        margin-top: 40px;
+        margin: 40px 0;
+    }
+
+    &__text {
+        padding: 40px 0;
     }
 }
 
 @media screen and (min-width: 768px) {
     .page {
-     
         &__photos {
             padding: 40px 0;
         }

@@ -554,10 +554,6 @@ textarea {
     }
 }
 
-.required {
-    color: $redColor;
-}
-
 .form-line {
     @include flex();
     margin-bottom: 15px;
@@ -685,21 +681,27 @@ button {
     }
 }
 
-input {
+input,
+textarea {
     height: 60px;
-    border-radius: 4px;
+    width: 100%;
+    border-radius: 5px;
     background-color: #ffffff;
-    border: none;
-    width: 90%;
+    border: 1px solid #e6e6e6;
     padding: 10px 20px;
+    min-width: 260px;
+    line-height: 1.7;
     &.lastname {
         width: 0;
         height: 0;
         position: absolute;
-        left: -1000px;
+        left: -10000px;
     }
 }
-.input,
+textarea {
+    height: 120px;
+    resize: none;
+}
 .select {
     height: 40px;
     border: 1px solid $borderColor;
@@ -721,15 +723,7 @@ input {
         cursor: not-allowed;
     }
 }
-.text {
-    border: 1px solid $borderColor;
-    border-radius: 3px;
-    color: $darkgrayColor;
-    font-size: 16px;
-    padding: 4px 10px;
-    transition: 0.2s border;
-    width: 100%;
-}
+
 .red {
     color: $redColor;
 }
@@ -801,7 +795,7 @@ img {
     height: 46px;
     background-color: $neonColor;
     color: #fff;
-    z-index: 99999;
+    z-index: 9;
     cursor: pointer;
     transition-duration: 0.3s;
     border-radius: 50%;

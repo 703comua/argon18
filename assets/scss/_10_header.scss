@@ -440,6 +440,10 @@
             }
         }
 
+        &__callback-btn {
+            margin: 0 auto 50px;
+            width: 140px;
+        }
         /*--------------------*/
         /*--- new-products ---*/
         /*--------------------*/
@@ -572,23 +576,33 @@
 
 @keyframes slide-down {
     from {
-        transform:translateY(-100%);
-   }
+        transform: translateY(-100%);
+    }
     to {
-        transform:translateY(0%);
-   }
+        transform: translateY(0%);
+    }
 }
 
 @keyframes slide-up {
     from {
-        transform:translateY(0%);
-   }
+        transform: translateY(0%);
+    }
     to {
-        transform:translateY(-100%);
-   }
+        transform: translateY(-100%);
+    }
 }
 
 @media screen and (min-width: 360px) {
+}
+@media screen and (min-width: 539px) {
+    /*----------------*/
+    /*--- Mob-menu ---*/
+    /*----------------*/
+    .mob-menu {
+        .mob-menu__callback-btn {
+            display: none;
+        }
+    }
 }
 @media screen and (max-width: 540px) {
     .header__menu-burger {

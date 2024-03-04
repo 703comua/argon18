@@ -1,39 +1,53 @@
+/* oswald-regular - cyrillic_latin */
 @font-face {
-    font-family: 'Roboto Condensed Light';
-    src: url('../fonts/subset-RobotoCondensed-Light.eot');
-    src: url('../fonts/subset-RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/subset-RobotoCondensed-Light.woff2') format('woff2'),
-        url('../fonts/subset-RobotoCondensed-Light.woff') format('woff'),
-        url('../fonts/subset-RobotoCondensed-Light.ttf') format('truetype'),
-        url('../fonts/subset-RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
-    font-weight: 300;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Oswald";
     font-style: normal;
-    font-display: swap;
+    font-weight: 400;
+    src: url("../fonts/oswald-v53-cyrillic_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* oswald-500 - cyrillic_latin */
 @font-face {
-    font-family: 'Roboto Condensed Regular';
-    src: url('../fonts/subset-RobotoCondensed-Regular.eot');
-    src: url('../fonts/subset-RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/subset-RobotoCondensed-Regular.woff2') format('woff2'),
-        url('../fonts/subset-RobotoCondensed-Regular.woff') format('woff'),
-        url('../fonts/subset-RobotoCondensed-Regular.ttf') format('truetype'),
-        url('../fonts/subset-RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg');
-    font-weight: normal;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Oswald";
     font-style: normal;
-    font-display: swap;
+    font-weight: 500;
+    src: url("../fonts/oswald-v53-cyrillic_latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* oswald-700 - cyrillic_latin */
 @font-face {
-    font-family: 'Roboto Condensed Bold';
-    src: url('../fonts/subset-RobotoCondensed-Bold.eot');
-    src: url('../fonts/subset-RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/subset-RobotoCondensed-Bold.woff2') format('woff2'),
-        url('../fonts/subset-RobotoCondensed-Bold.woff') format('woff'),
-        url('../fonts/subset-RobotoCondensed-Bold.ttf') format('truetype'),
-        url('../fonts/subset-RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
-    font-weight: bold;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Oswald";
     font-style: normal;
-    font-display: swap;
+    font-weight: 700;
+    src: url("../fonts/oswald-v53-cyrillic_latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* roboto-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-500 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/roboto-v30-cyrillic_latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-700 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/roboto-v30-cyrillic_latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
