@@ -7,7 +7,7 @@
     // flex: 0 0 25%;
     position: relative;
     padding: 16px 8px;
-    margin-top: 30px;
+    // margin-top: 30px;
     // min-height: 390px;
     &.available-3 {
         .product-block__link,
@@ -63,6 +63,9 @@
                 }
                 &.is_new {
                     background: $naviColor;
+                }
+                &.is_preorder {
+                    background: $neonColor;
                 }
             }
         }

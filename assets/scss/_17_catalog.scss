@@ -1,10 +1,12 @@
 .catalog {
+    &__title {
+        margin-bottom: 32px;
+    }
     &__list {
         display: flex;
         // gap: 24px;
         gap: 12px;
         flex-wrap: wrap;
-        padding-top: 32px;
     }
     &__item {
         width: calc((100% - 12px) / 2);
@@ -133,5 +135,4 @@
 }
 
 @media screen and (min-width: 1440px) {
-
 }

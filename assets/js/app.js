@@ -1,5 +1,7 @@
 "use strict";
 
+var state = true;
+
 $(document).ready(function () {
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
@@ -252,21 +254,77 @@ $(document).ready(function () {
         // },
     });
 
+    // лента отзывов
+    const customerReviewsContent = new Swiper(".customer-reviews__content", {
+        // If we need pagination
+        pagination: {
+            el: ".customer-reviews__pagination",
+            clickable: true,
+        },
+        slidesPerView: 4,
+        slidesPerGroup: 2,
+        spaceBetween: 24,
+        // loop: true, // безконечный слайдер
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: true, // отключить после ручной прокрутки
+        //     pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 1280px
+            1280: {
+                slidesPerView: 3,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".arrows__btn.arrow-rigth",
+            prevEl: ".arrows__btn.arrow-left",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
     $(".header__menu-burger").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
+
     $(".mob-menu__close").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
+
     $(".mob-menu__callback-btn").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
+
     $(".backdrop").on("click", function () {
         $(".header__mob-menu").removeClass("active");
         $("body").removeClass("no-scroll");
@@ -326,5 +384,69 @@ $(document).ready(function () {
             800
         );
         return false;
+    });
+
+    // text-block open
+    $(".text__open-btn").on("click", function () {
+        const target = $(this).attr("data-target");
+        // console.log($(target));
+        // console.log(state);
+        let btn = $(this);
+        let btnSpan = $(this).find("span");
+        let textBlockTitleHeight = $(".text__title").height();
+        let textBlockContentHeight = $(".text__content").height();
+
+        if (state && !$(this).hasClass("open")) {
+            // разворачиваем текстовый блок
+            $(target).addClass("open");
+            $(target).animate(
+                {
+                    maxHeight: textBlockTitleHeight + textBlockContentHeight + 100, // ширина элемента
+                },
+                {
+                    duration: 300, // продолжительность анимации
+                    easing: "linear", // скорость анимации
+                    complete: function () {
+                        // callback
+                        // alert("текстовый блок развернут");
+                        btnSpan.text("Свернуть");
+                        btn.addClass("active");
+                    },
+                }
+            );
+        } else {
+            // сворачиваем текстовый блок
+            $(target).animate(
+                {
+                    maxHeight: 500, // ширина элемента
+                },
+                {
+                    duration: 300, // продолжительность анимации
+                    easing: "linear", // скорость анимации
+                    complete: function () {
+                        // callback
+                        // alert("текстовый блок свернут");
+                        btnSpan.text("Читать далее");
+                        btn.removeClass("active");
+                        $(target).removeClass("open");
+                    },
+                }
+            );
+        }
+        state = !state;
+    });
+
+    $(".header__menu-btn").on("click", function () {
+        $(".header__menu-list-item").removeClass("active");
+        $(this).parent().parent().toggleClass("active");
+        // console.log($(this).parent());
+        // console.log($(this).parent().parent());
+    });
+
+    $(document).click(function (event) {
+        // если мы кликнули в любом месте сайта, кроме иконки текущего выбранного языка
+        if (!$(event.target).closest($(".header__menu-list-item")).length) {
+            $(".header__menu-list-item").removeClass("active");
+        }
     });
 });

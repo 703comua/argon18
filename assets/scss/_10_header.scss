@@ -101,7 +101,7 @@
                         }
                     }
                 }
-                &:hover {
+                &:hover, &.active {
                     .header__menu-list-submenu {
                         visibility: visible;
                         opacity: 1;
@@ -157,7 +157,7 @@
             }
             &-submenu {
                 position: absolute;
-                top: 74px;
+                top: 78px;
                 left: 0;
                 width: 205px;
                 background: #fff;
@@ -278,6 +278,13 @@
                 .header__menu-cart-icon {
                     fill: $redColor;
                 }
+            }
+        }
+        &-btn {
+            background: none;
+            border: none;
+            .icon {
+                margin: 0;
             }
         }
     }

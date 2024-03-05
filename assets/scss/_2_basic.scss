@@ -169,16 +169,35 @@ body {
         }
     }
     &__text {
-        // font-size: 40px;
-        font-size: 28px;
-        font-weight: 500;
-
         @include flex();
         justify-content: center;
         gap: 24px;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    &.text-left {
+        text-align: left;
+        .section-title__text {
+            justify-content: flex-start;
+        }
     }
 }
 
+@media screen and (min-width: 768px) {
+    .section-title {
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        color: $blackColor;
+        font-weight: 500;
+
+        &__top {
+            font-size: 22px;
+        }
+        &__text {
+            font-size: 40px;
+        }
+    }
+}
 /* ------------------------------------------------------------------------- */
 a {
     outline: none;
@@ -401,6 +420,11 @@ blockquote {
     text-align: center;
 }
 
+.block-center {
+    @include flex();
+    justify-content: center;
+}
+
 .flex-center {
     @include flex();
     justify-content: center;
@@ -428,7 +452,7 @@ blockquote {
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border 250ms ease-in-out;
     .icon {
         fill: #fff;
-        transition: fill 250ms ease-in-out, right 250ms ease-in-out;
+        transition: all 250ms ease-in-out;
         position: absolute;
         right: 16px;
         top: 50%;
@@ -466,9 +490,28 @@ blockquote {
             }
         }
     }
+    &.btn-gray {
+        background: $grayColor;
+        border: 1px solid $grayColor;
+        color: $basicColor;
+        .icon {
+            fill: $basicColor;
+        }
+        &:hover,
+        &:focus {
+            border: 1px solid $darkgrayColor;
+            background-color: $darkgrayColor;
+            color: #fff;
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
 }
 
-.show-all {
+.show-all,
+.arrow-rigth,
+.arrow-left {
     width: 40px;
     height: 40px;
     display: block;
@@ -489,7 +532,19 @@ blockquote {
         fill: #fff;
     }
 }
-
+.arrow-left {
+    .icon {
+        transform: rotate(-135deg);
+        transition: 0.5s;
+        fill: #fff;
+    }
+    &:hover {
+        background-color: $redColor;
+        .icon {
+            transform: rotate(-180deg);
+        }
+    }
+}
 textarea {
     &.input {
         height: 150px;

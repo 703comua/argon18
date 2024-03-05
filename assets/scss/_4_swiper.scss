@@ -1,18 +1,19 @@
 .swiper {
     width: 100%;
     height: 100%;
-    // padding-bottom: 40px; 
+    // padding-bottom: 40px;
 
     .swiper-slide {
         width: auto;
     }
     .swiper-button-disabled {
-        opacity: .5;
+        opacity: 0.5;
     }
     .swiper-pagination {
         bottom: 16px;
     }
-    .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
         width: 30px;
         height: 6px;
         border-radius: 0;
@@ -22,14 +23,15 @@
             background: $redColor;
         }
     }
-    
+
     .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         .swiper-pagination-bullet {
             margin: 0 10px;
         }
     }
 
-    .swiper-button-prev-slide, .swiper-button-next-slide {
+    .swiper-button-prev-slide,
+    .swiper-button-next-slide {
         position: absolute;
         z-index: 10;
         top: 50%;
@@ -47,7 +49,8 @@
             fill: $basicColor;
             transition: fill 250ms ease-in-out;
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background-color: $redColor;
             border-color: $redColor;
             .icon {
@@ -58,7 +61,8 @@
         &.transparent {
             background-color: transparent;
             border-color: transparent;
-            &:hover,&:focus {
+            &:hover,
+            &:focus {
                 background-color: $neonColor;
                 border-color: $neonColor;
             }
@@ -76,11 +80,29 @@
             transform: rotate(-90deg);
         }
     }
+
+    .customer-reviews__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        @include flex();
+        justify-content: center;
+        padding-top: 36px;
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #111111;
+            background: transparent;
+            &.swiper-pagination-bullet-active {
+                background: $redColor;
+                border: 1px solid $redColor;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     .swiper {
-        .swiper-button-prev-slide, .swiper-button-next-slide {
+        .swiper-button-prev-slide,
+        .swiper-button-next-slide {
             display: none;
         }
     }
