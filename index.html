@@ -69,14 +69,12 @@
                                 </a>
                                 <ul class="header__menu-list">
                                     <li class="header__menu-list-item">
-                                        <a href="#" class="header__menu-list-link">
-                                            О нас
-                                            <button class="header__menu-btn">
-                                                <svg class="header__menu-list-icon icon" width="10" height="10">
-                                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-                                                </svg>
-                                            </button>
-                                        </a>
+                                        <a href="https://google.com" class="header__menu-list-link"> О нас </a>
+                                        <button class="header__menu-list-btn">
+                                            <svg class="header__menu-list-icon icon" width="10" height="10">
+                                                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                            </svg>
+                                        </button>
                                         <div class="header__menu-list-submenu">
                                             <ul class="header__menu-list-submenu-list">
                                                 <li class="header__menu-list-submenu-item">
@@ -98,14 +96,12 @@
                                         </div>
                                     </li>
                                     <li class="header__menu-list-item">
-                                        <a href="#" class="header__menu-list-link">
-                                            Каталог
-                                            <button class="header__menu-btn">
-                                                <svg class="header__menu-list-icon icon" width="10" height="10">
-                                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-                                                </svg>
-                                            </button>
-                                        </a>
+                                        <a href="#" class="header__menu-list-link"> Велосипеды </a>
+                                        <button class="header__menu-list-btn">
+                                            <svg class="header__menu-list-icon icon" width="10" height="10">
+                                                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                            </svg>
+                                        </button>
                                         <div class="header__menu-list-submenu">
                                             <ul class="header__menu-list-submenu-list">
                                                 <li class="header__menu-list-submenu-item">
@@ -269,11 +265,24 @@
                         </li>
                     </ul>
 
+                    <button
+                        class="mob-menu__callback-btn btn"
+                        data-tooltip="Обратный звонок"
+                        data-flow="down"
+                        data-fancybox
+                        data-src="#modal-callback"
+                    >
+                        Callback
+                        <svg class="icon" width="16" height="16">
+                            <use href="./assets/svg/icons.svg#icon-callback"></use>
+                        </svg>
+                    </button>
+
                     <div class="mob-menu__main-menu main-menu">
                         <h3 class="mob-menu-title">Меню</h3>
                         <ul class="mob-menu-catalog">
                             <li class="mob-menu-catalog__item">
-                                <a class="mob-menu-catalog__link" href="#"> О нас </a>
+                                <a class="mob-menu-catalog__link" href="#">О нас</a>
                                 <button class="mob-menu-catalog__btn" type="button">
                                     <svg class="mob-menu-catalog__btn-icon" width="14" height="14">
                                         <use xlink:href="./assets/svg/icons.svg#icon-chevron-down"></use>
@@ -336,19 +345,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    <button
-                        class="mob-menu__callback-btn btn"
-                        data-tooltip="Обратный звонок"
-                        data-flow="down"
-                        data-fancybox
-                        data-src="#modal-callback"
-                    >
-                        Callback
-                        <svg class="icon" width="16" height="16">
-                            <use href="./assets/svg/icons.svg#icon-callback"></use>
-                        </svg>
-                    </button>
 
                     <div class="mob-menu-title-wrap">
                         <h3 class="mob-menu-title">Новые поступления</h3>
@@ -487,7 +483,7 @@
                                 data-fancybox="video"
                             >
                                 <span class="hero__play-btn-inner">
-                                    <svg class="hero__play-btn-icon" width="24" height="24">
+                                    <svg class="hero__play-btn-icon" width="16" height="16">
                                         <use href="./assets/svg/icons.svg#icon-play"></use>
                                     </svg>
                                 </span>
@@ -503,43 +499,43 @@
                         <h2 class="photos__title visually-hidden">Gallery</h2>
                         <div class="photos__slides swiper">
                             <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide photos__slides-item">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide1.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide8.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide3.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide5.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide6.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide7.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="swiper-slide photos__slides-item">
+                                </li>
+                                <li class="swiper-slide photos__slides-item">
                                     <a class="photos__slides-link" href="#">
                                         <img class="photos__slides-img" src="./assets/img/slides/slide2.jpg" alt="" />
                                     </a>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                             <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>
 
@@ -585,78 +581,78 @@
                         <h2 class="photos__title visually-hidden">Популярные бренды</h2>
                         <div class="brands__slides swiper">
                             <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <div class="brands__slides-item swiper-slide">
+                            <ul class="swiper-wrapper">
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/1.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/2.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/3.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/4.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/5.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/6.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/7.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/8.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/9.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/10.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/11.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/12.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/13.jpg" alt="" />
                                     </a>
-                                </div>
-                                <div class="brands__slides-item swiper-slide">
+                                </li>
+                                <li class="brands__slides-item swiper-slide">
                                     <a class="brands__slides-link" href="#">
                                         <img class="brands__slides-img" src="./assets/img/brands/14.jpg" alt="" />
                                     </a>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
 
                             <!-- If we need navigation buttons -->
                             <div class="swiper-button-prev-slide transparent">
@@ -720,9 +716,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="advantages__name">Безупречное качество товара</h3>
-                                <div class="advantages__text">
-                                    Мы гарантируем безупречное качество наших товаров и соблюдение всех прав потребителя.
-                                </div>
+                                <div class="advantages__text">Мы гарантируем качество наших товаров и соблюдение всех прав потребителя.</div>
                             </li>
                         </ul>
                     </div>
@@ -975,7 +969,7 @@
                                     </p>
                                     <a class="product-block__link" href="#">
                                         <ul class="product-block__stickers stickers"></ul>
-                                        <img class="product-block__image" src="" alt="" />
+                                        <img class="product-block__image" src="./assets/img/products/50.jpg" alt="" />
                                     </a>
                                     <ul class="product-block__colors colors">
                                         <li class="colors__item">
@@ -2893,11 +2887,9 @@
                             <ul class="customer-reviews__list swiper-wrapper">
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi
-                                        inventore ut? Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias
-                                        aperiam labore veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">
@@ -2908,9 +2900,9 @@
                                 </li>
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">
@@ -2921,9 +2913,9 @@
                                 </li>
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">
@@ -2934,9 +2926,9 @@
                                 </li>
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">
@@ -2947,9 +2939,9 @@
                                 </li>
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">
@@ -2960,9 +2952,9 @@
                                 </li>
                                 <li class="customer-reviews__item swiper-slide">
                                     <p class="customer-reviews__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut?
-                                        Sequi, asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore
-                                        veritatis itaque!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nemo minus nulla modi inventore ut? Sequi,
+                                        asperiores nulla excepturi perferendis nobis reiciendis, voluptas quam aut molestias aperiam labore veritatis
+                                        itaque!
                                     </p>
                                     <h3 class="customer-reviews__name">Richard Scott</h3>
                                     <div class="block-center">

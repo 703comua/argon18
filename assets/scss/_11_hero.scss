@@ -8,8 +8,7 @@
     z-index: 1;
     text-align: center;
     color: #fff;
-    // background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../img/hero_bg_1x.jpg');
-    background-image: url("../img/hero_bg.webp");
+    background-image: url("../img/hero_bg_768.webp");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -112,7 +111,7 @@
         }
         &-icon {
             fill: $neonColor;
-            margin-left: 6px;
+            margin-left: 4px;
             transition: 0.5s;
         }
         &:hover {
@@ -172,9 +171,21 @@
 }
 
 @media screen and (min-width: 768px) {
+    .hero {
+        background-image: url("../img/hero_bg_992.webp");
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        background-image: url("../img/hero_bg_1280.webp");
+    }
 }
 
 @media screen and (min-width: 1280px) {
+    .hero {
+        background-image: url("../img/hero_bg_1440.webp");
+    }
 }
 
 @media screen and (min-width: 1440px) {

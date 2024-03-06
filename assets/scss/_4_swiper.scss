@@ -9,6 +9,7 @@
     .swiper-button-disabled {
         opacity: 0.5;
     }
+
     .swiper-pagination {
         bottom: 16px;
     }
@@ -97,6 +98,10 @@
             }
         }
     }
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 768px) {

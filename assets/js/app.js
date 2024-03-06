@@ -436,17 +436,16 @@ $(document).ready(function () {
         state = !state;
     });
 
-    $(".header__menu-btn").on("click", function () {
-        $(".header__menu-list-item").removeClass("active");
-        $(this).parent().parent().toggleClass("active");
-        // console.log($(this).parent());
-        // console.log($(this).parent().parent());
+    $(".header__menu-list-btn").on("click", function () {
+        $(".header__menu-list-item").not($(this).parent()).removeClass("active");
+        $(this).parent().toggleClass("active");
     });
 
     $(document).click(function (event) {
         // если мы кликнули в любом месте сайта, кроме иконки текущего выбранного языка
         if (!$(event.target).closest($(".header__menu-list-item")).length) {
             $(".header__menu-list-item").removeClass("active");
+            console.log('removeClass("active")');
         }
     });
 });

@@ -36,7 +36,7 @@
             filter: drop-shadow(0 0 17.5px rgba(156, 156, 156, 0.2));
             box-shadow: 0 2px 5px -2px rgba(254, 254, 254, 0.1);
             .header__menu-list-link {
-                padding: 25px 20px;
+                padding: 25px 30px;
             }
             .header__menu-container {
                 padding: 0;
@@ -46,6 +46,9 @@
             }
             .header__menu-list-submenu {
                 top: 64px;
+            }
+            .header__menu-burger {
+                margin-left: 20px;
             }
         }
         &.slide-down {
@@ -101,7 +104,8 @@
                         }
                     }
                 }
-                &:hover, &.active {
+                &:hover,
+                &.active {
                     .header__menu-list-submenu {
                         visibility: visible;
                         opacity: 1;
@@ -155,9 +159,22 @@
                     margin-left: 4px;
                 }
             }
+            &-btn {
+                background: none;
+                border: none;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                z-index: 1;
+                transform: translateY(-50%);
+                .icon {
+                    margin: 0;
+                    transition: all 250ms ease-in-out;
+                }
+            }
             &-submenu {
                 position: absolute;
-                top: 78px;
+                top: 74px;
                 left: 0;
                 width: 205px;
                 background: #fff;
@@ -278,13 +295,6 @@
                 .header__menu-cart-icon {
                     fill: $redColor;
                 }
-            }
-        }
-        &-btn {
-            background: none;
-            border: none;
-            .icon {
-                margin: 0;
             }
         }
     }
@@ -601,6 +611,7 @@
 
 @media screen and (min-width: 360px) {
 }
+
 @media screen and (min-width: 539px) {
     /*----------------*/
     /*--- Mob-menu ---*/
@@ -611,6 +622,7 @@
         }
     }
 }
+
 @media screen and (max-width: 540px) {
     .header__menu-burger {
     }
@@ -621,6 +633,7 @@
         display: none;
     }
 }
+
 @media screen and (max-width: 600px) {
     .header__menu-burger {
         margin-left: 0;
@@ -634,15 +647,30 @@
         margin-left: 10px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .header {
         &__top {
             &-container {
                 max-width: 100%;
             }
         }
+        &__menu {
+            &-burger {
+                margin-left: 0;
+            }
+            &-callback {
+                margin-left: 20px;
+            }
+            &-user,
+            &-wishlist,
+            &-cart {
+                margin-left: 18px;
+            }
+        }
     }
 }
+
 @media screen and (min-width: 768px) {
     .header {
         &__top {
@@ -707,6 +735,7 @@
         }
     }
 }
+
 @media screen and (min-width: 992px) {
     .header {
         /*------------*/
@@ -727,7 +756,7 @@
                 @include flex();
             }
             &-list-link {
-                padding: 30px 10px;
+                padding: 30px;
             }
             &-container {
                 padding-left: calc((100% - 992px + 30px) / 2);
@@ -744,6 +773,34 @@
         }
     }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+    .header {
+        &__menu {
+            &-burger {
+                margin-left: 0;
+            }
+            &-callback {
+                margin-left: 20px;
+            }
+            &-user,
+            &-wishlist,
+            &-cart {
+                margin-left: 18px;
+            }
+            &-list-link {
+                padding: 30px 20px;
+                &:before {
+                    display: none;
+                }
+            }
+            &-list-btn {
+                right: 0;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .header {
         &__top {
@@ -764,7 +821,7 @@
                 padding: 0 40px;
             }
             &-list-link {
-                padding: 30px 20px;
+                padding: 30px;
             }
             &-container {
                 padding-left: calc((100% - 1280px + 30px) / 2);
@@ -773,6 +830,7 @@
         }
     }
 }
+
 @media screen and (min-width: 1440px) {
     .header {
         /*------------*/
