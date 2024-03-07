@@ -6,13 +6,23 @@
         position: relative;
     }
     &__list {
-
     }
     &__item {
         text-align: center;
         padding: 26px;
         background-color: #fff;
         border-radius: 4px;
+        .product-block__meta {
+            font-size: 14px;
+        }
+        .customers-reviews__link {
+            font-size: 0;
+            @include flex();
+            justify-content: center;
+        }
+        .customers-reviews__photo {
+            max-height: 150px;
+        }
     }
     &__text {
         color: $darkgrayColor;
@@ -20,6 +30,10 @@
         line-height: 28px;
         font-weight: 400;
         margin-bottom: 20px;
+
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // max-height: 112px;
     }
     &__name {
         font-size: 22px;

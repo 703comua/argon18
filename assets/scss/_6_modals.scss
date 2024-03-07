@@ -73,4 +73,14 @@
             margin-right: 12px;
         }
     }
+    &__text {
+        padding: 5px 0;
+    }
+    &__link {
+        color: $neonColor;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

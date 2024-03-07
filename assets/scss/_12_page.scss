@@ -1,6 +1,7 @@
 .page {
     flex: 1 1 auto;
     // margin-bottom: 40px;
+    padding-top: 74px;
 
     &__photos {
         padding: 20px 0 40px;
@@ -30,6 +31,10 @@
     &__text {
         padding: 40px 0;
     }
+
+    &.index {
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -37,5 +42,11 @@
         &__photos {
             padding: 40px 0;
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .page {
+        padding-top: 58px;
     }
 }

@@ -280,10 +280,12 @@ $(document).ready(function () {
             // when window width is >= 360px
             360: {
                 slidesPerView: 1,
+                slidesPerGroup: 1,
             },
             // when window width is >= 768px
             768: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
             },
             // when window width is >= 992px
             992: {
@@ -305,6 +307,15 @@ $(document).ready(function () {
         // scrollbar: {
         // 	el: '.swiper-scrollbar',
         // },
+    });
+
+    // breadcrumbs
+    const breadcrumbsContainer = new Swiper(".breadcrumbs__container", {
+        slidesPerView: "auto",
+        freeMode: true, // при перетаскивании превью ведет себя как при скролле
+        grabCursor: true, // Если установлено значение true, указатель изменится на форму ладони, когда мышь накрывает Swiper, а указатель изменится на форму ручки при перетаскивании. (Зависит от формы браузера)
+        speed: 1000,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
     });
 
     $(".header__menu-burger").on("click", function () {
