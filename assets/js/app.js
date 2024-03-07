@@ -316,6 +316,10 @@ $(document).ready(function () {
         grabCursor: true, // Если установлено значение true, указатель изменится на форму ладони, когда мышь накрывает Swiper, а указатель изменится на форму ручки при перетаскивании. (Зависит от формы браузера)
         speed: 1000,
         touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
     });
 
     $(".header__menu-burger").on("click", function () {
