@@ -5,6 +5,7 @@ var state = true;
 $(document).ready(function () {
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
+        closeExisting: true,
     });
 
     // slider-mainpage
@@ -202,7 +203,7 @@ $(document).ready(function () {
         // },
     });
 
-    // лента новинок
+    // лента распродажа
     const salesProducts = new Swiper(".sales-products", {
         // If we need pagination
         // pagination: {
@@ -322,6 +323,76 @@ $(document).ready(function () {
         },
     });
 
+    // лента популярных брендов
+    const popularBrandsContent = new Swiper(".popular-brands__content", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        slidesPerView: 5,
+        slidesPerGroup: 2,
+        // loop: true, // безконечный слайдер
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: true, // отключить после ручной прокрутки
+            pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 360px
+            480: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 5,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".arrows__btn.arrow-rigth",
+            prevEl: ".arrows__btn.arrow-left",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    // лента топ продаж в aside
+    const asideTopSaleSwiper = new Swiper(".aside__top-sale-swiper", {
+        // If we need pagination
+        pagination: {
+            el: ".aside-top-sale__pagination",
+            clickable: true,
+        },
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: true, // безконечный слайдер
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: true, // отключить после ручной прокрутки
+            pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        },
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+    });
+
     $(".header__menu-burger").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
@@ -333,8 +404,13 @@ $(document).ready(function () {
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
-
     $(".mob-menu__callback-btn").on("click", function () {
+        $(".header__mob-menu").toggleClass("active");
+        $("body").toggleClass("no-scroll");
+        $(".backdrop").toggle();
+    });
+
+    $(".cabinet__auth-btn.login").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
@@ -343,7 +419,14 @@ $(document).ready(function () {
     $(".backdrop").on("click", function () {
         $(".header__mob-menu").removeClass("active");
         $("body").removeClass("no-scroll");
+        $(".aside").removeClass("is-open");
         $(".backdrop").hide();
+    });
+
+    $(".aside__close-btn").on("click", function () {
+        $(".aside").toggleClass("is-open");
+        $("body").toggleClass("no-scroll");
+        $(".backdrop").toggle();
     });
 
     $(".mob-menu-catalog__btn").on("click", function () {
@@ -460,7 +543,110 @@ $(document).ready(function () {
         // если мы кликнули в любом месте сайта, кроме иконки текущего выбранного языка
         if (!$(event.target).closest($(".header__menu-list-item")).length) {
             $(".header__menu-list-item").removeClass("active");
-            console.log('removeClass("active")');
+            // console.log('removeClass("active")');
         }
+        // если мы кликнули в любом месте сайта, кроме кнопки сортирвоки товара
+        if (!$(event.target).closest($(".sorter__btn")).length) {
+            $(".sorter__dropdownmenu").slideUp();
+        }
+    });
+
+    // sorter__btn
+    $(".sorter__btn").on("click", () => {
+        $(".sorter__dropdownmenu").slideToggle();
+    });
+
+    // product sorting
+    $(".sorter__dropdownmenu .dropdownmenu__item").on("click", function () {
+        $(".sorter__dropdownmenu .dropdownmenu__item").removeClass("active");
+        $(this).toggleClass("active");
+        $(".sorter__dropdownmenu").slideToggle();
+        // $('.backdrop').hide();
+        $(".sorter__current-value").text($(this).attr("data-text"));
+
+        var $layerId = $(this).data("layerid");
+        var $layerLink = $(this).data("layerlink");
+        var $from = $(this).data("from");
+        var $till = $(this).data("till");
+        var $sortValue = $(this).data("sortvalue");
+
+        // alert('layerId = ' + $layerId);
+        // alert('layerLink = ' + $layerLink);
+        // alert('sortValue = ' + $sortValue);
+        filter_products_list($layerId, $from, $till, $sortValue);
+    });
+
+    // aside__label
+    $(".aside__label").on("click", function (event) {
+        event.preventDefault(); // Будут отменен переход по ссылке
+        // console.log(event);
+        // $(this).toggleClass('active');
+        // $(this).parent().parent().toggleClass('active');
+        $(this).next(".aside__content").slideToggle();
+        $(this).closest(".aside__item").toggleClass("active");
+        // $($(this).parent().parent().children(".submenu")).toggle();
+    });
+
+    // filterbox__head
+    $(".filterbox__head").on("click", function (event) {
+        $(this).next(".filterbox__content").slideToggle();
+        $(this).toggleClass("is-close");
+        // $($(this).parent().parent().children(".submenu")).toggle();
+    });
+
+    // price-slider
+    if ($("div").is(".price-slider")) {
+        // alert('price slider exist');
+        let price_from_min = $("#price_from_min").val();
+        // console.log('price_from_min = ' + price_from_min);
+        let price_till_max = $("#price_till_max").val();
+        // console.log('price_till_max = ' + price_till_max);
+        let price_from = $("#price_from").val();
+        // console.log('price_from = ' + price_from);
+        let price_till = $("#price_till").val();
+        // console.log('price_till = ' + price_till);
+        $(".price-slider").slider({
+            range: true,
+            step: 1,
+            min: Number(price_from_min),
+            max: Number(price_till_max),
+            values: [Number(price_from), Number(price_till)],
+            slide: function (event, ui) {
+                // Поле минимального значения
+                $("#price_from").val(ui.values[0]);
+                // Поле максимального значения
+                $("#price_till").val(ui.values[1]);
+            },
+            // отслеживаем событие перетаскивания бегунков мышкой
+            change: function (event, ui) {
+                // console.log('event = ' + event);
+                // console.log('min = ' + ui.values[ 0 ]);
+                // console.log('max = ' + ui.values[ 1 ]);
+                // getMatchBlock();
+            },
+        });
+        // Записываем значения ползунков в момент загрузки страницы
+        // То есть значения по умолчанию
+        $("#price_from").val($(".price-slider").slider("values", 0));
+        $("#price_till").val($(".price-slider").slider("values", 1));
+
+        // при смене значений текстового поля
+        $(".price").on("change paste keyup", function () {
+            // console.log($(ev.target).val());
+            // console.log('changed price range');
+            // обновляем слайдер
+            clearTimeout(timer);
+            var ms = 1500; // milliseconds
+            timer = setTimeout(function () {
+                generatePriceRangeSlider();
+            }, ms);
+        });
+    }
+
+    // filter-show-btn
+    $(".filter-show-btn").on("click", function () {
+        $(".aside").addClass("is-open");
+        $("body").addClass("no-scroll");
+        $(".backdrop").show();
     });
 });

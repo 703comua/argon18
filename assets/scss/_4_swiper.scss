@@ -85,11 +85,11 @@
             transform: rotate(-90deg);
         }
     }
-
-    .customer-reviews__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    .customer-reviews__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    .aside-top-sale__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         @include flex();
         justify-content: center;
-        padding-top: 36px;
+        padding-top: 20px;
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;

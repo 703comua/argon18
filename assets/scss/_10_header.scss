@@ -32,6 +32,7 @@
             top: 0;
             left: 0;
             transform: translateX(0%);
+            z-index: 11;
 
             filter: drop-shadow(0 0 17.5px rgba(156, 156, 156, 0.2));
             box-shadow: 0 2px 5px -2px rgba(254, 254, 254, 0.1);
@@ -340,7 +341,7 @@
             &:hover {
                 .mob-menu__close-icon {
                     fill: $redColor;
-                    transform: rotate(180deg);
+                    transform: rotate(90deg);
                 }
             }
         }
@@ -395,7 +396,7 @@
         }
         .mob-menu-title {
             font-size: 24px;
-            font-family: "Oswald", sans-serif;
+            font-family: $titleFont;
             font-weight: 500;
         }
 

@@ -1,6 +1,5 @@
 .page {
     flex: 1 1 auto;
-    // margin-bottom: 40px;
     padding-top: 74px;
 
     &__photos {
@@ -34,6 +33,10 @@
 
     &.index {
         padding-top: 0;
+    }
+
+    &__endsection {
+        padding: 40px 0;
     }
 }
 

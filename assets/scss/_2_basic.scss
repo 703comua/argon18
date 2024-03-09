@@ -19,6 +19,7 @@ $redColor: #dd2b1c;
 $lightblueColor: #00a6ff;
 $yellowColor: #ffa900;
 
+$titleFont: "Oswald", sans-serif;
 /* ------------------------------------------------------------------------- */
 body {
     font-family: "Roboto", sans-serif;
@@ -108,7 +109,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-family: "Oswald", sans-serif;
+    font-family: $titleFont;
     color: $blackColor;
     font-weight: 500;
 
@@ -186,7 +187,7 @@ body {
 @media screen and (min-width: 768px) {
     .section-title {
         text-align: center;
-        font-family: "Oswald", sans-serif;
+        font-family: $titleFont;
         color: $blackColor;
         font-weight: 500;
 
@@ -467,6 +468,10 @@ blockquote {
             right: 22px;
         }
     }
+    &.btn-no-icon {
+        justify-content: center;
+        padding: 12px 20px;
+    }
     &.btn-neon {
         background: $neonColor;
         border: 1px solid $neonColor;
@@ -477,6 +482,52 @@ blockquote {
             .icon {
                 fill: $neonColor;
             }
+        }
+    }
+    &.btn-neon-inverse {
+        color: $neonColor;
+        background-color: #fff;
+        border: 1px solid $neonColor;
+        &:hover,
+        &:focus {
+            background: $neonColor;
+            border: 1px solid $neonColor;
+            color: #fff;
+            .icon {
+                fill: #fff;
+            }
+        }
+        .icon {
+            fill: $neonColor;
+        }
+    }
+    &.btn-navi {
+        background: $naviColor;
+        border: 1px solid $naviColor;
+        &:hover,
+        &:focus {
+            color: $naviColor;
+            background-color: #fff;
+            .icon {
+                fill: $naviColor;
+            }
+        }
+    }
+    &.btn-navi-inverse {
+        color: $naviColor;
+        background-color: #fff;
+        border: 1px solid $naviColor;
+        &:hover,
+        &:focus {
+            background: $naviColor;
+            border: 1px solid $naviColor;
+            color: #fff;
+            .icon {
+                fill: #fff;
+            }
+        }
+        .icon {
+            fill: $naviColor;
         }
     }
     &.btn-neon-hover {
@@ -501,6 +552,40 @@ blockquote {
         &:focus {
             border: 1px solid $darkgrayColor;
             background-color: $darkgrayColor;
+            color: #fff;
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
+    &.btn-darkgray {
+        background: $darkgrayColor;
+        border: 1px solid $darkgrayColor;
+        color: #fff;
+        .icon {
+            fill: #fff;
+        }
+        &:hover,
+        &:focus {
+            border: 1px solid $neonColor;
+            background-color: $neonColor;
+            color: #fff;
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
+    &.btn-transparent {
+        background: transparent;
+        border: 1px solid $grayColor;
+        color: $basicColor;
+        .icon {
+            fill: $basicColor;
+        }
+        &:hover,
+        &:focus {
+            border: 1px solid $neonColor;
+            background-color: $neonColor;
             color: #fff;
             .icon {
                 fill: #fff;
