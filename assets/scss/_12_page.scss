@@ -2,6 +2,10 @@
     flex: 1 1 auto;
     padding-top: 74px;
 
+    &.index {
+        padding-top: 0;
+    }
+
     &__photos {
         padding: 20px 0 40px;
     }
@@ -31,11 +35,11 @@
         padding: 40px 0;
     }
 
-    &.index {
-        padding-top: 0;
+    &__endsection {
+        padding: 40px 0;
     }
 
-    &__endsection {
+    &__productpage {
         padding: 40px 0;
     }
 }

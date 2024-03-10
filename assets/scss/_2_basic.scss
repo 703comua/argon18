@@ -459,6 +459,9 @@ blockquote {
         top: 50%;
         transform: translateY(-50%);
     }
+    &.jc-reverse {
+        flex-direction: row-reverse;
+    }
     &:hover,
     &:focus {
         background-color: #fff;

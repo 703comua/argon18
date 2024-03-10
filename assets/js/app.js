@@ -1,4 +1,4 @@
-"use strict";
+("use strict");
 
 var state = true;
 
@@ -404,6 +404,7 @@ $(document).ready(function () {
         $("body").toggleClass("no-scroll");
         $(".backdrop").toggle();
     });
+
     $(".mob-menu__callback-btn").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
@@ -648,5 +649,283 @@ $(document).ready(function () {
         $(".aside").addClass("is-open");
         $("body").addClass("no-scroll");
         $(".backdrop").show();
+    });
+
+    ////////////////////////////////////
+    // product-gallery
+    ////////////////////////////////////
+    var product_slider = new Swiper(".product-slider", {
+        slidesPerView: 1,
+        thumbs: {
+            // свайпер с миниатюрами
+            // и его настройки
+            swiper: {
+                el: ".product-thumbs-slider",
+                slidesPerView: 4,
+                direction: "vertical",
+                // slideToClickedSlide: true,
+            },
+        },
+        navigation: {
+            nextEl: ".product-gallery-thumbs-prev-btn",
+            prevEl: ".product-gallery-thumbs-next-btn",
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true, // отключить после ручной прокрутки
+            pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        },
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                pagination: {
+                    el: ".product-slider-swiper-pagination",
+                    type: "bullets",
+                    clickable: true,
+                },
+            },
+            // when window width is >= 990px
+            768: {},
+        },
+    });
+
+    // summary__tab
+    $(".summary__tab").on("click", function () {
+        $(".summary__tab").removeClass("active");
+        $(this).addClass("active");
+        $(".summary__item").removeClass("active");
+        $(".summary__item-" + $(this).data("target")).addClass("active");
+    });
+
+    // product payments tabs
+    $(".payments-info-tabs-item").on("click", function () {
+        $(".payments-info-tabs-item").removeClass("active");
+        $(this).addClass("active");
+        $(".payments-info-tabs-content-item").removeClass("active");
+        $(".payments-info-tabs-content-item").hide();
+        $(".tab-content-" + $(this).data("target")).fadeIn();
+    });
+
+    // product payments tabs items-mobile
+    $(".payments-info-tabs-item-mobile").on("click", function () {
+        // $(this).next().toggleClass;
+        $(this).next(".payments-info-tabs-content-item").slideToggle("fast");
+        $(this).toggleClass("active");
+    });
+
+    // rating__scroll-btn
+    $(".rating__scroll-btn").on("click", function () {
+        $(".summary__tab").removeClass("active");
+        $(".summary__tab.reviews").addClass("active");
+        $(".summary__item").removeClass("active");
+        $(".summary__item.reviews").addClass("active");
+
+        var $fullDescription = $(".summary");
+        var $fullDescriptionTop = $fullDescription.position().top - 10;
+        // console.log('commentsTop = ' + $commentsTop);
+
+        $("body,html").animate(
+            {
+                scrollTop: $fullDescriptionTop,
+            },
+            800
+        );
+    });
+
+    ////////////
+    // plus
+    ////////////
+    $(".quantity__btn.plus").on("click", function () {
+        let qty = $(".quantity__input").val();
+        $(".quantity__input").val(parseInt(qty) + 1);
+    });
+
+    ////////////
+    // minus
+    ////////////
+    $(".quantity__btn.minus").on("click", function () {
+        let qty = $(".quantity__input").val();
+        let newValue = parseInt(qty) - 1;
+        if (newValue < 1) {
+            newValue = 1;
+        }
+        $(".quantity__input").val(newValue);
+    });
+
+    // interest-lenta
+    const interest_lenta = new Swiper(".swiper-interest-lenta", {
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        loop: false, // безконечный слайдер
+        // autoplay: {
+        // 	delay: 3000,
+        // 	disableOnInteraction: true, // отключить после ручной прокрутки
+        // 	pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+        slidesPerView: 3,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1150px
+            1150: {
+                slidesPerView: 6,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".interest-lenta-swiper-button-next",
+            prevEl: ".interest-lenta-swiper-button-prev",
+        },
+
+        watchOverflow: true, // отключается слайдер, если слайдов меньше чем нужно
+        slidesPerGroup: 2, // кол-во пролистываемых слайдов
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
+    ///////////////////////////////////////////////////////
+    // validation
+    ///////////////////////////////////////////////////////
+    var setDefault = function (elem) {
+        elem.parent().removeClass("has-error");
+        elem.parent().removeClass("has-success");
+        //elem.next().next().removeClass('glyphicon-remove');
+        //elem.next().next().removeClass('glyphicon-ok');
+    };
+    var setOk = function (elem) {
+        elem.parent().removeClass("has-error");
+        elem.parent().addClass("has-success");
+        //elem.next().next().removeClass('glyphicon-remove');
+        //elem.next().next().addClass('glyphicon-ok');
+    };
+    var setError = function (elem) {
+        elem.parent().removeClass("has-success");
+        elem.parent().addClass("has-error");
+        //elem.next().next().removeClass('glyphicon-ok');
+        //elem.next().next().addClass('glyphicon-remove');
+    };
+    var checkMob = function (elem) {
+        var value = elem.val();
+        //console.log("Value = (" + value + ")");
+        if (value === "") {
+            setError(elem);
+            //console.log("Error: value = ''");
+            return false;
+        } else if (!/^\+7\((039|985|050|063|073|066|067|068|091|092|093|094|095|096|097|098|099)\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}$/.test(value)) {
+            setError(elem);
+            //console.log("Error: incorrect format phone ''");
+            return false;
+        } else {
+            setOk(elem);
+            //console.log("Ok");
+            return true;
+        }
+    };
+    var checkEmail = function (elem) {
+        var value = elem.val();
+        //console.log("Value = (" + value + ")");
+        if (value === "") {
+            setError(elem);
+            //console.log("Error: value = ''");
+            return false;
+        } else if (
+            !/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i.test(
+                value
+            )
+        ) {
+            setError(elem);
+            // console.log("Error: incorrect format email ''");
+            return false;
+        } else {
+            setOk(elem);
+            //console.log("Ok");
+            return true;
+        }
+    };
+    var checkPswd = function (pasw, pasw2) {
+        var pasw_value = pasw.val();
+        var pasw2_value = pasw2.val();
+        //console.log("Value = (" + value + ")");
+        if (pasw_value !== pasw2_value) {
+            setError(pasw2);
+            // console.log("Error: pasw_value != pasw2_value");
+            alert("Пароли не совпадают");
+            return false;
+        } else {
+            setOk(pasw2);
+            //console.log("Ok");
+            return true;
+        }
+    };
+    var checkPswdPattern = function (elem) {
+        var value = elem.val();
+
+        let regexp = /(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}/g; // (regexp только что создан: regexp.lastIndex=0)
+        if (!regexp.test(value)) {
+            setError(elem);
+            //console.log("Error: value = ''");
+            return false;
+        } else {
+            setOk(elem);
+            //console.log("Ok");
+            return true;
+        }
+    };
+
+    var checkText = function (elem) {
+        var value = elem.val();
+        //console.log("Value = (" + value + ")");
+        if (value === "") {
+            setError(elem);
+            // console.log("Error: value = ''");
+            return false;
+        } else if (value.length < 3) {
+            setError(elem);
+            // console.log("Error: length less 3 symbols");
+            return false;
+        } else {
+            setOk(elem);
+            //console.log("Ok");
+            return true;
+        }
+    };
+
+    $(".phone").mask("+7(999) 999-99-99", {
+        completed: function () {
+            checkMob(this);
+            //console.log('checker after complete');
+        },
+    });
+    $("body").on("focus", ".phone", function (event) {
+        $(".phone").mask("+7(999) 999-99-99", {
+            completed: function () {
+                checkMob(this);
+                //console.log('checker after complete');
+            },
+        });
     });
 });
