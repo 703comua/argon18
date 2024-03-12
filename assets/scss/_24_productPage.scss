@@ -1308,6 +1308,8 @@
                     width: unset;
                     border: 1px solid $borderColor;
                     border-bottom: none;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
                     &:not(:last-child) {
                         margin-right: 10px;
                     }

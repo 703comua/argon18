@@ -77,7 +77,7 @@
   
   /* FLOW: DOWN */
   [data-tooltip][data-flow^="down"]::before {
-	top: 100%;
+	top: 105%;
 	border-top-width: 0;
 	border-bottom-color: #333;
   }
