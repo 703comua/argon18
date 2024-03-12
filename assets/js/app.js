@@ -734,7 +734,7 @@ $(document).ready(function () {
             // when window width is >= 360px
             360: {
                 pagination: {
-                    el: ".product-slider-swiper-pagination",
+                    el: ".product-slider__pagination",
                     type: "bullets",
                     clickable: true,
                 },
