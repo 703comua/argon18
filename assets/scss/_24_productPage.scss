@@ -268,8 +268,7 @@
 
             .product-slider__pagination {
                 visibility: visible;
-                // bottom: -20px;
-                bottom: 0;
+                bottom: -10px;
             }
         }
 
@@ -805,8 +804,8 @@
             .stars {
                 @include flex();
                 padding-top: 0px;
-                max-width: 85px;
-                flex: 1;
+                width: 85px;
+                // flex: 1;
                 justify-content: flex-start;
 
                 &-item {
