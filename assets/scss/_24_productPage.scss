@@ -639,7 +639,9 @@
                         padding-bottom: 0px;
                         margin-bottom: 15px;
                         color: #373737;
-
+                        &.active {
+                            display: block;
+                        }
                         &:last-child {
                             padding-bottom: 0px;
                             margin-bottom: 0px;
@@ -803,7 +805,7 @@
             .stars {
                 @include flex();
                 padding-top: 0px;
-                max-width: 460px;
+                max-width: 85px;
                 flex: 1;
                 justify-content: flex-start;
 
@@ -1197,65 +1199,64 @@
             margin-left: 5px;
         }
     }
-}
-
-.arrows {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    @include flex();
-    width: 60px;
-    height: 30px;
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        &:after {
-            display: none;
-        }
-
-        position: static;
-        margin-top: 0;
-        width: 30px;
-        height: 30px;
-        border: $redColor;
+    .arrows {
+        position: absolute;
+        right: 0;
+        top: 2px;
         @include flex();
-        justify-content: center;
-        // background: green;
-        border: 1px solid $redColor;
+        width: 60px;
+        height: 30px;
 
-        .icon {
-            width: 14px;
-            height: 14px;
-            fill: $redColor;
-            display: block;
-        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            &:after {
+                display: none;
+            }
 
-        &:hover {
-            background: $redColor;
+            position: static;
+            margin-top: 0;
+            width: 30px;
+            height: 30px;
+            border: $redColor;
+            @include flex();
+            justify-content: center;
+            // background: green;
+            border: 1px solid $redColor;
 
             .icon {
-                fill: #fff;
+                width: 14px;
+                height: 14px;
+                fill: $redColor;
+                display: block;
+            }
+
+            &:hover {
+                background: $redColor;
+
+                .icon {
+                    fill: #fff;
+                }
             }
         }
-    }
 
-    .swiper-button-prev {
-        border-radius: 3px 0px 0px 3px;
-        border-right-width: 0;
+        .swiper-button-prev {
+            border-radius: 3px 0px 0px 3px;
+            border-right-width: 0;
 
-        .icon {
-            transform: rotate(180deg);
+            .icon {
+                transform: rotate(180deg);
+            }
+
+            &.swiper-button-disabled {
+            }
         }
 
-        &.swiper-button-disabled {
+        .swiper-button-next {
+            border-radius: 0 3px 3px 0;
+            // &.swiper-button-disabled {
+            // 	border-left: none;
+            // }
         }
-    }
-
-    .swiper-button-next {
-        border-radius: 0 3px 3px 0;
-        // &.swiper-button-disabled {
-        // 	border-left: none;
-        // }
     }
 }
 

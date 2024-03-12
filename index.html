@@ -313,6 +313,14 @@
                             </a>
                         </li>
                         <li class="mob-menu__contacts-item">
+                            <a class="mob-menu__contacts-link" href="#" target="_blank">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-telegram"></use>
+                                </svg>
+                                @argon18_ru
+                            </a>
+                        </li>
+                        <li class="mob-menu__contacts-item">
                             <span class="mob-menu__contacts-link">
                                 <svg class="icon" width="16" height="16">
                                     <use href="./assets/svg/icons.svg#icon-address"></use>
@@ -3256,12 +3264,12 @@
                                 <a class="contacts__link" href="#">
                                     <div class="contacts__box">
                                         <svg class="icon" width="20" height="20">
-                                            <use href="./assets/svg/icons.svg#icon-address"></use>
+                                            <use href="./assets/svg/icons.svg#icon-telegram"></use>
                                         </svg>
                                     </div>
                                     <div class="contacts__content">
-                                        <h3 class="contacts__head">Карта проезда</h3>
-                                        <p class="contacts__text">Москва, ул.Лужники 24с4<br />Шоу-рум: Аквакомплекс Лужники</p>
+                                        <h3 class="contacts__head">Telegram</h3>
+                                        <p class="contacts__text">@argon18_ru</p>
                                     </div>
                                 </a>
                             </li>
@@ -3305,25 +3313,33 @@
             <div class="modal__content">
                 <form class="modal__form" action="#">
                     <div class="modal__field">
-                        <label class="modal__label" for="user-name">
+                        <label class="modal__label" for="callback__user-name">
                             <span class="modal__label-title">Имя</span>
                         </label>
                         <div class="modal__input-wrap">
-                            <input class="modal__input has-icon" type="text" id="user-name" name="user-name" placeholder="Name" autofocus required />
+                            <input
+                                class="modal__input has-icon"
+                                type="text"
+                                id="callback__user-name"
+                                name="user-name"
+                                placeholder="Name"
+                                autofocus
+                                required
+                            />
                             <svg class="modal__input-icon" width="16" height="16">
                                 <use href="./assets/svg/icons.svg#icon-person"></use>
                             </svg>
                         </div>
                     </div>
                     <div class="modal__field">
-                        <label for="user-phone" class="modal__label">
+                        <label for="callback__user-phone" class="modal__label">
                             <span class="modal__label-title">Phone</span>
                         </label>
                         <div class="modal__input-wrap">
                             <input
                                 class="modal__input has-icon"
                                 type="tel"
-                                id="user-phone"
+                                id="callback__user-phone"
                                 name="user-phone"
                                 placeholder="+7(___) ___-__-__ "
                                 required
@@ -3348,25 +3364,33 @@
             <div class="modal__content">
                 <form class="modal__form" action="#">
                     <div class="modal__field">
-                        <label class="modal__label required" for="user-name">
+                        <label class="modal__label required" for="director__user-name">
                             <span class="modal__label-title">Имя</span>
                         </label>
                         <div class="modal__input-wrap">
-                            <input class="modal__input has-icon" type="text" id="user-name" name="user-name" placeholder="Name" autofocus required />
+                            <input
+                                class="modal__input has-icon"
+                                type="text"
+                                id="director__user-name"
+                                name="user-name"
+                                placeholder="Name"
+                                autofocus
+                                required
+                            />
                             <svg class="modal__input-icon" width="16" height="16">
                                 <use href="./assets/svg/icons.svg#icon-person"></use>
                             </svg>
                         </div>
                     </div>
                     <div class="modal__field">
-                        <label class="modal__label required" for="user-phone">
+                        <label class="modal__label required" for="director__user-phone">
                             <span class="modal__label-title">Phone</span>
                         </label>
                         <div class="modal__input-wrap">
                             <input
                                 class="modal__input has-icon"
                                 type="tel"
-                                id="user-phone"
+                                id="director__user-phone"
                                 name="user-phone"
                                 placeholder="+7(___) ___-__-__ "
                                 required
@@ -3470,7 +3494,7 @@
             </div>
         </div>
 
-        <script type="module" src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/swiper-bundle.min.js"></script>
         <script src="./assets/js/fancybox.umd.js"></script>
         <script src="./assets/js/jquery.maskedinput.min.js"></script>
