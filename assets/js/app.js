@@ -393,6 +393,61 @@ $(document).ready(function () {
         touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
     });
 
+    // interest-lenta
+    const interestProducts = new Swiper(".interest-products", {
+        // If we need pagination
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+
+        loop: false, // безконечный слайдер
+        // autoplay: {
+        // 	delay: 3000,
+        // 	disableOnInteraction: true, // отключить после ручной прокрутки
+        // 	pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
+        // },
+        // loopedSlides: 1,
+        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+        slidesPerView: 3,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            360: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1150px
+            1150: {
+                slidesPerView: 6,
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next-slide",
+            prevEl: ".swiper-button-prev-slide",
+        },
+
+        watchOverflow: true, // отключается слайдер, если слайдов меньше чем нужно
+        slidesPerGroup: 2, // кол-во пролистываемых слайдов
+
+        // And if we need scrollbar
+        // scrollbar: {
+        // 	el: '.swiper-scrollbar',
+        // },
+    });
+
     $(".header__menu-burger").on("click", function () {
         $(".header__mob-menu").toggleClass("active");
         $("body").toggleClass("no-scroll");
@@ -732,6 +787,25 @@ $(document).ready(function () {
         );
     });
 
+    // rating__scroll-btn
+    $(".descr__scroll-btn").on("click", function () {
+        $(".summary__tab").removeClass("active");
+        $(".summary__tab.description").addClass("active");
+        $(".summary__item").removeClass("active");
+        $(".summary__item.description").addClass("active");
+
+        var $fullDescription = $(".summary");
+        var $fullDescriptionTop = $fullDescription.position().top - 10;
+        // console.log('commentsTop = ' + $commentsTop);
+
+        $("body,html").animate(
+            {
+                scrollTop: $fullDescriptionTop,
+            },
+            800
+        );
+    });
+
     ////////////
     // plus
     ////////////
@@ -750,61 +824,6 @@ $(document).ready(function () {
             newValue = 1;
         }
         $(".quantity__input").val(newValue);
-    });
-
-    // interest-lenta
-    const interest_lenta = new Swiper(".swiper-interest-lenta", {
-        // If we need pagination
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-
-        loop: false, // безконечный слайдер
-        // autoplay: {
-        // 	delay: 3000,
-        // 	disableOnInteraction: true, // отключить после ручной прокрутки
-        // 	pauseOnMouseEnter: true, // When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.
-        // },
-        // loopedSlides: 1,
-        touchAngle: 10, // Allowable angle (in degrees) to trigger touch move
-        // slidesPerView: 'auto',
-        // centeredSlides: true,
-        slidesPerView: 3,
-
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is >= 320px
-            360: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 768px
-            768: {
-                slidesPerView: 4,
-            },
-            // when window width is >= 992px
-            992: {
-                slidesPerView: 4,
-            },
-            // when window width is >= 1150px
-            1150: {
-                slidesPerView: 6,
-            },
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: ".interest-lenta-swiper-button-next",
-            prevEl: ".interest-lenta-swiper-button-prev",
-        },
-
-        watchOverflow: true, // отключается слайдер, если слайдов меньше чем нужно
-        slidesPerGroup: 2, // кол-во пролистываемых слайдов
-
-        // And if we need scrollbar
-        // scrollbar: {
-        // 	el: '.swiper-scrollbar',
-        // },
     });
 
     ///////////////////////////////////////////////////////
@@ -929,3 +948,85 @@ $(document).ready(function () {
         });
     });
 });
+
+function findVideos() {
+    let videos = document.querySelectorAll(".video");
+
+    for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+    }
+}
+
+function setupVideo(video) {
+    let link = video.querySelector(".video__link");
+    let media = video.querySelector(".video__media");
+    let button = video.querySelector(".video__button");
+    let id = parseMediaURL(media);
+
+    video.addEventListener("click", () => {
+        let iframe = createIframe(id);
+
+        link.remove();
+        button.remove();
+        video.appendChild(iframe);
+    });
+
+    link.removeAttribute("href");
+    video.classList.add("video--enabled");
+}
+
+function parseMediaURL(media) {
+    let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+    let url = media.src;
+    let match = url.match(regexp);
+
+    return match[1];
+}
+
+function createIframe(id) {
+    let iframe = document.createElement("iframe");
+
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("allow", "autoplay");
+    iframe.setAttribute("src", generateURL(id));
+    iframe.classList.add("video__media");
+
+    return iframe;
+}
+
+function generateURL(id) {
+    let query = "?rel=0&showinfo=0&autoplay=1";
+
+    return "https://www.youtube.com/embed/" + id + query;
+}
+
+function generatePriceRangeSlider() {
+    // alert('price slider exist');
+    let price_from_min = $("#price_from_min").val();
+    // console.log('price_from_min = ' + price_from_min);
+    let price_till_max = $("#price_till_max").val();
+    // console.log('price_till_max = ' + price_till_max);
+    let price_from = $("#price_from").val();
+    // console.log('price_from = ' + price_from);
+    let price_till = $("#price_till").val();
+    // console.log('price_till = ' + price_till);
+    $(".price-slider").slider({
+        range: true,
+        step: 1,
+        min: Number(price_from_min),
+        max: Number(price_till_max),
+        values: [Number(price_from), Number(price_till)],
+        slide: function (event, ui) {
+            // Поле минимального значения
+            $("#price_from").val(ui.values[0]);
+            // Поле максимального значения
+            $("#price_till").val(ui.values[1]);
+        },
+    });
+    // Записываем значения ползунков в момент загрузки страницы
+    // То есть значения по умолчанию
+    $("#price_from").val($(".price-slider").slider("values", 0));
+    $("#price_till").val($(".price-slider").slider("values", 1));
+}
+
+findVideos();

@@ -86,7 +86,8 @@
         }
     }
     .customer-reviews__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
-    .aside-top-sale__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    .aside-top-sale__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    .product-slider-swiper-pagination.swiper-pagination.sp.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         @include flex();
         justify-content: center;
         padding-top: 20px;
