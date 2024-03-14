@@ -1,15 +1,13 @@
 body.sidebar-collapse {
     .aside {
         width: 50px;
-        .search-form {
-            display: none;
-        }
     }
 }
 .aside {
     width: 230px;
     background-color: #222d32;
     transition: 0.5s;
+    overflow-y: auto;
     .search-form {
         @include flex();
         justify-content: space-between;
@@ -89,7 +87,7 @@ body.sidebar-collapse {
                         height: 30px;
                     }
                     &.active {
-                        > .menu-aside__row-btn {
+                        > button {
                             .icon {
                                 transform: rotate(0deg);
                             }

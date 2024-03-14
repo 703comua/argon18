@@ -43,9 +43,10 @@ body.sidebar-collapse {
     display: flex;
     align-items: stretch;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
     &__burger-btn {
-        @include flex();
+        display: none;
+        align-items: center;
         justify-content: center;
         background: none;
         border: none;
@@ -80,11 +81,11 @@ body.sidebar-collapse {
                 color: #fff;
             }
             .dropdown-menu {
-                box-shadow: 0 3px 15px rgba(0,0,0,.09);
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09);
                 display: none;
                 position: absolute;
                 z-index: 1;
-                top: 50px; 
+                top: 50px;
                 right: 0;
                 width: 280px;
                 background-color: #f9f9f9;
@@ -175,6 +176,12 @@ body.sidebar-collapse {
         &__nav {
             transition: 0.5s;
             width: 100%;
+        }
+    }
+    .nav {
+        justify-content: space-between;
+        &__burger-btn {
+            display: flex;
         }
     }
 }
