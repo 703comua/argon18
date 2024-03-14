@@ -1,0 +1,32 @@
+body.sidebar-collapse {
+    .footer {
+        margin-left: 50px;
+    }
+}
+.footer {
+    @include flex();
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
+    color: #444;
+    border-top: 1px solid #d2d6de;
+    margin-left: 230px;
+    transition: 0.5s;
+    height: 50px;
+
+    &__copy {
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body.sidebar-collapse {
+        .footer {
+            margin-left: 0px;
+        }
+    }
+    .footer {
+        transition: 0.5s;
+        margin-left: 0;
+    }
+}

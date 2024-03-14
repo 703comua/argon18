@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="./favicon.ico" rel="shortcut icon" />
+
+	<link rel="stylesheet" href="./assets/css/fancybox.css" />
+	<link rel="stylesheet" href="./assets/admin/css/admin.css" />
+</head>
+<body>
+	<button class="up" type="button">
+		<svg class="icon" width="12" height="12">
+			<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+		</svg>
+	</button>
+	<div class="wrapper">
+		<header class="header">
+			<a class="header__logo" href="./index.html" target="_blank">
+				<img class="header__img" src="./favicon.ico" alt="favicon" width="20" height="20">
+				<span class="header__domain">argon18.ru</span>
+			</a>
+			<nav class="header__nav nav">
+				<button class="nav__burger-btn" type="button">
+					<svg class="icon" width="24" height="24">
+						<use href="./assets/svg/icons.svg#icon-burger2"></use>
+					</svg>
+				</button>
+				<ul class="nav__navlist navlist">
+					<li class="navlist__item">
+						<a class="navlist__link" href="#" data-tooltip="Отзывы клиентов" data-flow="down">
+							<svg class="icon" width="20" height="20">
+								<use href="./assets/svg/icons.svg#icon-comments"></use>
+							</svg>
+							<span class="count info">34</span>
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link" href="#" data-tooltip="Обратная связь" data-flow="down">
+							<svg class="icon" width="20" height="20">
+								<use href="./assets/svg/icons.svg#icon-email"></use>
+							</svg>
+							<span class="count success">4</span>
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link" href="#" data-tooltip="Callback" data-flow="down">
+							<svg class="icon" width="20" height="20">
+								<use href="./assets/svg/icons.svg#icon-callback"></use>
+							</svg>
+							<span class="count warning">45</span>
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link" href="#" data-tooltip="Написать директору" data-flow="down">
+							<svg class="icon" width="20" height="20">
+								<use href="./assets/svg/icons.svg#icon-write"></use>
+							</svg>
+							<span class="count danger">19</span>
+						</a>
+					</li>
+					<li class="navlist__item" data-flow="down">
+						<button class="navlist__btn navlist__btn-user" type="button">
+							<img class="header__img" src="./assets/admin/img/admin.jpg" alt="favicon" width="25" height="25">
+							Admin
+						</button>
+						<ul class="dropdown-menu">
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__link" href="#">
+									<svg class="icon" width="16" height="16">
+										<use href="./assets/svg/icons.svg#icon-user"></use>
+									</svg>
+									Клиенты
+								</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__link" href="#">
+									<svg class="icon" width="16" height="16">
+										<use href="./assets/svg/icons.svg#icon-settings"></use>
+									</svg>
+									Настройки
+								</a>
+							</li>
+							<li class="dropdown-menu__item logout">
+								<a class="dropdown-menu__link" href="#">
+									<svg class="icon" width="16" height="16">
+										<use href="./assets/svg/icons.svg#icon-logout"></use>
+									</svg>
+									Выход
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="main">
+			<aside class="aside">
+				<form action="#" class="search-form">
+					<input class="search-form__input" type="text" placeholder="Поиск товара по коду">
+					<button class="search-form__btn" type="submit">
+						<svg class="icon" width="18" height="18">
+							<use href="./assets/svg/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+				</form>
+				<form action="#" class="search-form">
+					<input class="search-form__input" type="text" placeholder="Поиск товара по имени">
+					<button class="search-form__btn" type="submit">
+						<svg class="icon" width="18" height="18">
+							<use href="./assets/svg/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+				</form>
+				<ul class="aside__menu menu-aside">
+					<li class="menu-aside__item title">
+						Меню навигации
+					</li>
+					<li class="menu-aside__item active">
+						<a href="#" class="menu-aside__link">
+							<svg class="icon" width="16" height="16">
+								<use href="./assets/svg/icons.svg#icon-catalog-fill"></use>
+							</svg>
+							Каталог
+						</a>
+						<button class="menu-aside__row-btn">
+							<svg class="icon" width="10" height="10">
+								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+							</svg>
+						</button>
+						<ul class="submenu">
+							<li class="active">
+								<a href="#">1) Раздел 1</a>
+								<button class="menu-aside__row-btn">
+									<svg class="icon" width="10" height="10">
+										<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+									</svg>
+								</button>
+								<ul class="submenu">
+									<li><a href="#">1) Раздел 1</a></li>
+									<li><a href="#">1) Раздел 2</a></li>
+									<li><a href="#">1) Раздел 3</a></li>
+									<li><a href="#">1) Раздел 4</a></li>
+									<li><a href="#">1) Раздел 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">1) Раздел 2</a></li>
+							<li><a href="#">1) Раздел 3</a></li>
+							<li><a href="#">1) Раздел 4</a></li>
+							<li><a href="#">1) Раздел 5</a></li>
+						</ul>
+					</li>
+					<li class="menu-aside__item">
+						<a href="" class="menu-aside__link">
+							<svg class="icon" width="16" height="16">
+								<use href="./assets/svg/icons.svg#icon-orders"></use>
+							</svg>
+							Заказы
+						</a>
+						<button class="menu-aside__row-btn">
+							<svg class="icon" width="10" height="10">
+								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="menu-aside__item">
+						<a href="" class="menu-aside__link">
+							<svg class="icon" width="16" height="16">
+								<use href="./assets/svg/icons.svg#icon-pages"></use>
+							</svg>
+							Страницы
+						</a>
+						<button class="menu-aside__row-btn">
+							<svg class="icon" width="10" height="10">
+								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="menu-aside__item">
+						<a href="" class="menu-aside__link">
+							<svg class="icon" width="16" height="16">
+								<use href="./assets/svg/icons.svg#icon-blog"></use>
+							</svg>
+							Блог
+						</a>
+						<button class="menu-aside__row-btn">
+							<svg class="icon" width="10" height="10">
+								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</aside>
+			<section class="content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum impedit repellendus reprehenderit ipsum similique necessitatibus facere cupiditate, sunt odit, asperiores nesciunt nisi nam eaque omnis perferendis commodi odio porro voluptatem.
+				</p>
+			</section>
+		</main>
+		<footer class="footer">
+			<p class="footer__copy">
+				© 2014-2024 <a href="#" target="_blank">https://argon.ru</a>
+			</p>
+			<a class="footer__developer" href="https://t.me/sergey_703" target="_blank">Developer</a>
+		</footer>
+	</div>
+
+	<script src="./assets/js/jquery-3.7.1.min.js"></script>
+	<script src="./assets/js/fancybox.umd.js"></script>
+
+	<script type="module" src="./assets/admin/js/admin.js"></script>
+</body>
+</html>

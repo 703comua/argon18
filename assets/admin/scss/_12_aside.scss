@@ -1,0 +1,176 @@
+body.sidebar-collapse {
+    .aside {
+        width: 50px;
+        .search-form {
+            display: none;
+        }
+    }
+}
+.aside {
+    width: 230px;
+    background-color: #222d32;
+    transition: 0.5s;
+    .search-form {
+        @include flex();
+        justify-content: space-between;
+        border-radius: 3px;
+        border: 1px solid #374850;
+        transition: 0.5s;
+        margin: 10px 10px;
+        &__input {
+            border-radius: 2px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: none;
+            background-color: #374850;
+            color: #666;
+            border: 1px solid transparent;
+            height: 35px;
+            padding-right: 0;
+            padding-left: 12px;
+            &:focus {
+                background-color: #fff;
+                & + button {
+                    background: #fff;
+                }
+            }
+            &::placeholder {
+                color: #b4b4b4;
+            }
+        }
+        &__btn {
+            border-radius: 2px;
+            background: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border: none;
+            height: 35px;
+            @include flex();
+            background-color: #374850;
+            justify-content: center;
+            padding: 0 10px;
+            .icon {
+                fill: #999;
+            }
+        }
+    }
+    .menu-aside {
+        &__item {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: block;
+            &.title {
+                color: #4b646f;
+                background: #1a2226;
+                padding: 10px 25px 10px 15px;
+                font-size: 12px;
+            }
+            &.active {
+                .menu-aside__link {
+                    border-left-color: $blueColor;
+                }
+                > .menu-aside__row-btn {
+                    .icon {
+                        transform: rotate(0deg);
+                    }
+                }
+                .submenu {
+                    display: block;
+                }
+            }
+            .submenu {
+                background: #2c3b41;
+                display: none;
+                padding-left: 10px;
+                li {
+                    position: relative;
+                    button {
+                        height: 30px;
+                    }
+                    &.active {
+                        > .menu-aside__row-btn {
+                            .icon {
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                }
+                a {
+                    padding-left: 10px;
+                    height: 30px;
+                    line-height: 30px;
+                    display: block;
+                    color: #8aa4af;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__link {
+            @include flex();
+            // display: block;
+            border-left: 3px solid transparent;
+            color: #b8c7ce;
+            position: relative;
+            padding-left: 15px;
+            height: 44px;
+            .icon {
+                fill: #b8c7ce;
+                margin-right: 8px;
+            }
+            &:hover,
+            &:focus {
+                color: #fff;
+                background: #1e282c;
+                .icon {
+                    fill: #fff;
+                }
+                .menu-aside__row-btn {
+                    .icon {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+        &__row-btn {
+            @include flex();
+            justify-content: center;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 1;
+            // transform: translateY(-50%);
+            background: none;
+            border: none;
+            width: 30px;
+            height: 44px;
+            .icon {
+                fill: #b8c7ce;
+                transform: rotate(90deg);
+                @include tr();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body.sidebar-collapse {
+        .aside {
+            transform: translateX(0);
+            width: 230px;
+        }
+    }
+    .aside {
+        width: 230px;
+        height: calc(100vh - 150px);
+        transform: translateX(-100%);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        transition: 0.5s;
+    }
+}

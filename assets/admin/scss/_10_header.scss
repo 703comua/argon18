@@ -1,0 +1,180 @@
+body.sidebar-collapse {
+    .header {
+        &__logo {
+            width: 50px;
+        }
+        &__img {
+            margin-right: 0;
+        }
+        &__domain {
+            display: none;
+        }
+    }
+}
+.header {
+    display: flex;
+    &__logo {
+        @include flex();
+        justify-content: center;
+        height: 50px;
+        width: 230px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        background-color: $darkblueColor;
+        &:hover {
+            background-color: #23648a;
+        }
+        transition: 0.5s;
+    }
+    &__img {
+        transition: 0.5s;
+        margin-right: 8px;
+    }
+    &__domain {
+        transition: 0.5s;
+    }
+    &__nav {
+        background-color: $blueColor;
+        height: 50px;
+    }
+}
+.nav {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    justify-content: space-between;
+    &__burger-btn {
+        @include flex();
+        justify-content: center;
+        background: none;
+        border: none;
+        align-self: stretch;
+        height: 100%;
+        padding: 0 15px;
+        &:hover,
+        &:focus {
+            background-color: $darkblueColor;
+        }
+        .icon {
+            fill: #fff;
+        }
+    }
+    &__navlist {
+    }
+    .navlist {
+        display: flex;
+        align-items: stretch;
+        &__item {
+            position: relative;
+            .count {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                text-align: center;
+                font-size: 9px;
+                padding: 2px 3px;
+                line-height: 1;
+                border-radius: 2px;
+                font-weight: 700;
+                color: #fff;
+            }
+            .dropdown-menu {
+                box-shadow: 0 3px 15px rgba(0,0,0,.09);
+                display: none;
+                position: absolute;
+                z-index: 1;
+                top: 50px; 
+                right: 0;
+                width: 280px;
+                background-color: #f9f9f9;
+                padding: 5px 10px;
+                border-bottom-right-radius: 4px;
+                border-bottom-left-radius: 4px;
+                &.is-open {
+                    display: block;
+                }
+                &__item {
+                    &:last-child {
+                        border-top: 1px solid #e6e6e6;
+                    }
+                }
+                &__link {
+                    @include flex();
+                    width: 100%;
+                    padding: 15px 10px;
+                    color: #444;
+                    .icon {
+                        fill: #444;
+                        stroke: #444;
+                        margin-right: 8px;
+                    }
+                    &:hover {
+                        background-color: #e6e6e6;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        &__link {
+            @include flex();
+            justify-content: center;
+            height: 100%;
+            padding: 0 15px;
+            height: 50px;
+            .icon {
+                fill: #fff;
+            }
+            &:hover,
+            &:focus {
+                background-color: $darkblueColor;
+            }
+        }
+        &__btn {
+            height: 100%;
+            background: none;
+            border: none;
+            @include flex();
+            padding: 0 15px;
+            color: #fff;
+            img {
+                border-radius: 50%;
+            }
+            &:hover,
+            &:focus {
+                background-color: $darkblueColor;
+            }
+            .icon {
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body.sidebar-collapse {
+        .header {
+            &__logo {
+                width: 100%;
+            }
+            &__img {
+                margin-right: 8px;
+            }
+            &__domain {
+                display: block;
+            }
+        }
+    }
+    .header {
+        flex-direction: column;
+        &__logo {
+            transition: 0.5s;
+            width: 100%;
+        }
+        &__nav {
+            transition: 0.5s;
+            width: 100%;
+        }
+    }
+}

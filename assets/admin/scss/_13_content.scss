@@ -1,0 +1,23 @@
+body.sidebar-collapse {
+    .content {
+        width: calc(100% - 50px);
+    }
+}
+.content {
+    background-color: #ecf0f5;
+    width: calc(100% - 230px);
+    padding: 15px;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+    body.sidebar-collapse {
+        .content {
+            width: calc(100%);
+        }
+    }
+    .content {
+        width: 100%;
+        transition: 0.5s;
+    }
+}
