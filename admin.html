@@ -1,215 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-	<link href="./favicon.ico" rel="shortcut icon" />
+        <link href="./favicon.ico" rel="shortcut icon" />
 
-	<link rel="stylesheet" href="./assets/css/fancybox.css" />
-	<link rel="stylesheet" href="./assets/admin/css/admin.css" />
-</head>
-<body>
-	<button class="up" type="button">
-		<svg class="icon" width="12" height="12">
-			<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-		</svg>
-	</button>
-	<div class="wrapper">
-		<header class="header">
-			<a class="header__logo" href="./index.html" target="_blank">
-				<img class="header__img" src="./favicon.ico" alt="favicon" width="20" height="20">
-				<span class="header__domain">argon18.ru</span>
-			</a>
-			<nav class="header__nav nav">
-				<button class="nav__burger-btn" type="button">
-					<svg class="icon" width="24" height="24">
-						<use href="./assets/svg/icons.svg#icon-burger2"></use>
-					</svg>
-				</button>
-				<ul class="nav__navlist navlist">
-					<li class="navlist__item">
-						<a class="navlist__link" href="#" data-tooltip="Отзывы клиентов" data-flow="down">
-							<svg class="icon" width="20" height="20">
-								<use href="./assets/svg/icons.svg#icon-comments"></use>
-							</svg>
-							<span class="count info">34</span>
-						</a>
-					</li>
-					<li class="navlist__item">
-						<a class="navlist__link" href="#" data-tooltip="Обратная связь" data-flow="down">
-							<svg class="icon" width="20" height="20">
-								<use href="./assets/svg/icons.svg#icon-email"></use>
-							</svg>
-							<span class="count success">4</span>
-						</a>
-					</li>
-					<li class="navlist__item">
-						<a class="navlist__link" href="#" data-tooltip="Callback" data-flow="down">
-							<svg class="icon" width="20" height="20">
-								<use href="./assets/svg/icons.svg#icon-callback"></use>
-							</svg>
-							<span class="count warning">45</span>
-						</a>
-					</li>
-					<li class="navlist__item">
-						<a class="navlist__link" href="#" data-tooltip="Написать директору" data-flow="down">
-							<svg class="icon" width="20" height="20">
-								<use href="./assets/svg/icons.svg#icon-write"></use>
-							</svg>
-							<span class="count danger">19</span>
-						</a>
-					</li>
-					<li class="navlist__item" data-flow="down">
-						<button class="navlist__btn navlist__btn-user" type="button">
-							<img class="header__img" src="./assets/admin/img/admin.jpg" alt="favicon" width="25" height="25">
-							Admin
-						</button>
-						<ul class="dropdown-menu">
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#">
-									<svg class="icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-user"></use>
-									</svg>
-									Клиенты
-								</a>
-							</li>
-							<li class="dropdown-menu__item">
-								<a class="dropdown-menu__link" href="#">
-									<svg class="icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-settings"></use>
-									</svg>
-									Настройки
-								</a>
-							</li>
-							<li class="dropdown-menu__item logout">
-								<a class="dropdown-menu__link" href="#">
-									<svg class="icon" width="16" height="16">
-										<use href="./assets/svg/icons.svg#icon-logout"></use>
-									</svg>
-									Выход
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="main">
-			<aside class="aside">
-				<form action="#" class="search-form">
-					<input class="search-form__input" type="text" placeholder="Поиск товара по коду">
-					<button class="search-form__btn" type="submit">
-						<svg class="icon" width="14" height="14">
-							<use href="./assets/svg/icons.svg#icon-search"></use>
-						</svg>
-					</button>
-				</form>
-				<form action="#" class="search-form">
-					<input class="search-form__input" type="text" placeholder="Поиск товара по имени">
-					<button class="search-form__btn" type="submit">
-						<svg class="icon" width="14" height="14">
-							<use href="./assets/svg/icons.svg#icon-search"></use>
-						</svg>
-					</button>
-				</form>
-				<ul class="aside__menu menu-aside">
-					<li class="menu-aside__item title">
-						Меню навигации
-					</li>
-					<li class="menu-aside__item active">
-						<a href="#" class="menu-aside__link">
-							<svg class="icon" width="16" height="16">
-								<use href="./assets/svg/icons.svg#icon-catalog-fill"></use>
-							</svg>
-							Каталог
-						</a>
-						<button class="menu-aside__row-btn">
-							<svg class="icon" width="10" height="10">
-								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-							</svg>
-						</button>
-						<ul class="submenu">
-							<li class="active">
-								<a href="#">1) Раздел 1</a>
-								<button class="menu-aside__row-btn">
-									<svg class="icon" width="10" height="10">
-										<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-									</svg>
-								</button>
-								<ul class="submenu">
-									<li><a href="#">1) Раздел 1</a></li>
-									<li><a href="#">1) Раздел 2</a></li>
-									<li><a href="#">1) Раздел 3</a></li>
-									<li><a href="#">1) Раздел 4</a></li>
-									<li><a href="#">1) Раздел 5</a></li>
-								</ul>
-							</li>
-							<li><a href="#">1) Раздел 2</a></li>
-							<li><a href="#">1) Раздел 3</a></li>
-							<li><a href="#">1) Раздел 4</a></li>
-							<li><a href="#">1) Раздел 5</a></li>
-						</ul>
-					</li>
-					<li class="menu-aside__item">
-						<a href="" class="menu-aside__link">
-							<svg class="icon" width="16" height="16">
-								<use href="./assets/svg/icons.svg#icon-orders"></use>
-							</svg>
-							Заказы
-						</a>
-						<button class="menu-aside__row-btn">
-							<svg class="icon" width="10" height="10">
-								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-							</svg>
-						</button>
-					</li>
-					<li class="menu-aside__item">
-						<a href="" class="menu-aside__link">
-							<svg class="icon" width="16" height="16">
-								<use href="./assets/svg/icons.svg#icon-pages"></use>
-							</svg>
-							Страницы
-						</a>
-						<button class="menu-aside__row-btn">
-							<svg class="icon" width="10" height="10">
-								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-							</svg>
-						</button>
-					</li>
-					<li class="menu-aside__item">
-						<a href="" class="menu-aside__link">
-							<svg class="icon" width="16" height="16">
-								<use href="./assets/svg/icons.svg#icon-blog"></use>
-							</svg>
-							Блог
-						</a>
-						<button class="menu-aside__row-btn">
-							<svg class="icon" width="10" height="10">
-								<use href="./assets/svg/icons.svg#icon-chevron-down"></use>
-							</svg>
-						</button>
-					</li>
-				</ul>
-			</aside>
-			<section class="content">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum impedit repellendus reprehenderit ipsum similique necessitatibus facere cupiditate, sunt odit, asperiores nesciunt nisi nam eaque omnis perferendis commodi odio porro voluptatem.
-				</p>
-			</section>
-		</main>
-		<footer class="footer">
-			<p class="footer__copy">
-				© 2014-2024 <a href="#" target="_blank">https://argon.ru</a>
-			</p>
-			<a class="footer__developer" href="https://t.me/sergey_703" target="_blank">Developer</a>
-		</footer>
-	</div>
+        <link rel="stylesheet" href="./assets/admin/vendor/select2/css/select2.min.css" />
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/fancybox.css" />
 
-	<script src="./assets/js/jquery-3.7.1.min.js"></script>
-	<script src="./assets/js/fancybox.umd.js"></script>
+        <link rel="stylesheet" href="./assets/admin/css/admin.css" />
+    </head>
+    <body>
+        <button class="up" type="button">
+            <svg class="icon" width="12" height="12">
+                <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+            </svg>
+        </button>
+        <div class="wrapper">
+            <header class="header">
+                <a class="header__logo" href="./index.html" target="_blank" data-tooltip="Открыть сайт" data-flow="right">
+                    <img class="header__img" src="./favicon.ico" alt="favicon" width="20" height="20" />
+                    <span class="header__domain">argon18.ru</span>
+                </a>
+                <nav class="header__nav nav">
+                    <button class="nav__burger-btn" type="button">
+                        <svg class="icon" width="24" height="24">
+                            <use href="./assets/svg/icons.svg#icon-burger2"></use>
+                        </svg>
+                    </button>
+                    <ul class="nav__navlist navlist">
+                        <li class="navlist__item">
+                            <a class="navlist__link" href="#" data-tooltip="Отзывы клиентов" data-flow="down">
+                                <svg class="icon" width="20" height="20">
+                                    <use href="./assets/svg/icons.svg#icon-comments"></use>
+                                </svg>
+                                <span class="count info">34</span>
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link" href="#" data-tooltip="Обратная связь" data-flow="down">
+                                <svg class="icon" width="20" height="20">
+                                    <use href="./assets/svg/icons.svg#icon-email"></use>
+                                </svg>
+                                <span class="count success">4</span>
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link" href="#" data-tooltip="Callback" data-flow="down">
+                                <svg class="icon" width="20" height="20">
+                                    <use href="./assets/svg/icons.svg#icon-callback"></use>
+                                </svg>
+                                <span class="count warning">45</span>
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link" href="#" data-tooltip="Написать директору" data-flow="down">
+                                <svg class="icon" width="20" height="20">
+                                    <use href="./assets/svg/icons.svg#icon-write"></use>
+                                </svg>
+                                <span class="count danger">19</span>
+                            </a>
+                        </li>
+                        <li class="navlist__item" data-flow="down">
+                            <button class="navlist__btn navlist__btn-user" type="button">
+                                <img class="header__img" src="./assets/admin/img/admin.jpg" alt="favicon" width="25" height="25" />
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu__item">
+                                    <a class="dropdown-menu__link" href="#">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-notepad"></use>
+                                        </svg>
+                                        Блокнот
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="dropdown-menu__link" href="#">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-user"></use>
+                                        </svg>
+                                        Клиенты
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="dropdown-menu__link" href="#">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-settings"></use>
+                                        </svg>
+                                        Настройки
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu__item logout">
+                                    <a class="dropdown-menu__link" href="#">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./assets/svg/icons.svg#icon-logout"></use>
+                                        </svg>
+                                        Выход
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <aside class="aside">
+                    <div class="product-selection">
+                        <select class="form-control select2">
+                            <option value="">Выборка товара</option>
+                            <option>1) Товар в наличии</option>
+                            <option>2) Товар уточнить наличие</option>
+                            <option>3) Товар ожидаем</option>
+                            <option>4) Товар Новинка</option>
+                            <option>5) Товар НЕ Новинка</option>
+                            <option>6) Товар Топ продаж</option>
+                            <option>7) Товар НЕ Топ продаж</option>
+                            <option>8) Товар Распродажа</option>
+                            <option>9) Товар НЕ Распродажа</option>
+                            <option>10) Товар Популярный</option>
+                            <option>11) Товар НЕ Популярный Товар НЕ Популярный</option>
+                        </select>
+                    </div>
+                    <form action="#" class="search-form">
+                        <input class="search-form__input" type="text" placeholder="Поиск товара по id" />
+                        <button class="search-form__btn" type="submit">
+                            <svg class="icon" width="14" height="14">
+                                <use href="./assets/svg/icons.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <form action="#" class="search-form">
+                        <input class="search-form__input" type="text" placeholder="Поиск товара по имени" />
+                        <button class="search-form__btn" type="submit">
+                            <svg class="icon" width="14" height="14">
+                                <use href="./assets/svg/icons.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <ul class="aside__menu menu-aside">
+                        <li class="menu-aside__item title">Меню навигации</li>
+                        <li class="menu-aside__item">
+                            <a href="#" class="menu-aside__link">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-catalog-fill"></use>
+                                </svg>
+                                Каталог
+                                <span class="count danger">23</span>
+                            </a>
+                            <button class="menu-aside__row-btn">
+                                <svg class="icon" width="10" height="10">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </button>
+                            <ul class="submenu">
+                                <li>
+                                    <div class="search-form">
+                                        <select class="form-control select2" style="width: 210px">
+                                            <option value="">Поиск раздела по имени</option>
+                                            <option>1) Товар в наличии</option>
+                                            <option>2) Товар уточнить наличие</option>
+                                            <option>3) Товар ожидаем</option>
+                                            <option>4) Товар Новинка</option>
+                                            <option>5) Товар НЕ Новинка</option>
+                                            <option>6) Товар Топ продаж</option>
+                                            <option>7) Товар НЕ Топ продаж</option>
+                                            <option>8) Товар Распродажа</option>
+                                            <option>9) Товар НЕ Распродажа</option>
+                                            <option>10) Товар Популярный</option>
+                                            <option>11) Товар НЕ Популярный Товар НЕ Популярный</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="form">
+                                    <form action="#" class="search-form">
+                                        <input class="search-form__input" type="text" placeholder="Поиск раздела по id" />
+                                        <button class="search-form__btn" type="submit">
+                                            <svg class="icon" width="14" height="14">
+                                                <use href="./assets/svg/icons.svg#icon-search"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <a href="#">1) Раздел 1</a>
+                                    <button class="menu-aside__row-btn">
+                                        <svg class="icon" width="10" height="10">
+                                            <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                        </svg>
+                                    </button>
+                                    <ul class="submenu">
+                                        <li><a href="#">1) Раздел 1</a></li>
+                                        <li><a href="#">1) Раздел 2</a></li>
+                                        <li><a href="#">1) Раздел 3</a></li>
+                                        <li><a href="#">1) Раздел 4</a></li>
+                                        <li><a href="#">1) Раздел 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">1) Раздел 2</a></li>
+                                <li><a href="#">1) Раздел 3</a></li>
+                                <li><a href="#">1) Раздел 4</a></li>
+                                <li><a href="#">1) Раздел 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-aside__item active">
+                            <a href="" class="menu-aside__link">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-orders"></use>
+                                </svg>
+                                Заказы
+                                <span class="count success">23</span>
+                            </a>
+                            <button class="menu-aside__row-btn">
+                                <svg class="icon" width="10" height="10">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="menu-aside__item">
+                            <a href="" class="menu-aside__link">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-pages"></use>
+                                </svg>
+                                Страницы
+                            </a>
+                            <button class="menu-aside__row-btn">
+                                <svg class="icon" width="10" height="10">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="menu-aside__item">
+                            <a href="" class="menu-aside__link">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-blog"></use>
+                                </svg>
+                                Блог
+                            </a>
+                            <button class="menu-aside__row-btn">
+                                <svg class="icon" width="10" height="10">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </aside>
+                <section class="content">
+                    <div class="content__head">
+                        <!-- head -->
+                        <h1>Каталог</h1>
+                        <!-- breadcrumbs -->
+                        <div class="content__breadcrumbs-wrap swiper">
+                            <ol class="content__breadcrumbs breadcrumbs swiper-wrapper">
+                                <li class="breadcrumbs__item swiper-slide">
+                                    <a class="breadcrumbs__link" href="#"> Каталог </a>
+                                </li>
+                                <li class="breadcrumbs__item swiper-slide">
+                                    <a class="breadcrumbs__link" href="#"> Раздел название 1 </a>
+                                </li>
+                                <li class="breadcrumbs__item swiper-slide">
+                                    <a class="breadcrumbs__link" href="#"> Раздел название 2 </a>
+                                </li>
+                                <li class="breadcrumbs__item swiper-slide">
+                                    <a class="breadcrumbs__link" href="#"> Раздел название 3 </a>
+                                </li>
+                                <li class="breadcrumbs__item swiper-slide">
+                                    <a class="breadcrumbs__link" href="#"> Раздел название 4 </a>
+                                </li>
+                            </ol>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- content -->
+                    <div class="content__body">
+                        <div class="box">
+                            <div class="box__body">
+                                <!-- box__head -->
+                                <div class="box__head">
+                                    <button type="button" class="btn btn-success" data-fancybox data-src="#modal-addform">
+                                        <svg class="icon" width="12" height="12">
+                                            <use href="./assets/svg/icons.svg#icon-plus"></use>
+                                        </svg>
+                                        Добавить
+                                    </button>
+                                    <ul class="box__counters counters">
+                                        <li class="counters__item">
+                                            <a class="counters__link" href="#"> Всего <span class="badge bg-light-blue">45</span> </a>
+                                        </li>
+                                        <li class="counters__item">
+                                            <a class="counters__link" href="#"> Активные <span class="badge bg-green">74</span> </a>
+                                        </li>
+                                        <li class="counters__item">
+                                            <a class="counters__link" href="#"> Выкл <span class="badge bg-red">10</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-	<script type="module" src="./assets/admin/js/admin.js"></script>
-</body>
+                                <!-- box__content -->
+                                <div class="box__content">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 30px"><input value="" type="checkbox" id="select-all" /></th>
+                                                <th class="gray">
+                                                    <small data-toggle="tooltip" data-placement="bottom" title="Количество строк в таблице">
+                                                        Строки: 35
+                                                    </small>
+                                                </th>
+                                                <th class="commands-th"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-row-data">
+                                                <td class="center gray">
+                                                    <input name="ch[]" value="1" type="checkbox" class="checkbox" />
+                                                    <small class="gray" data-toggle="tooltip" data-placement="bottom" title="id записи"> 1 </small>
+                                                </td>
+                                                <td class="td-row-data">
+                                                    <div class="row-data-wrapper">
+                                                        <div class="row-data">
+                                                            <p>
+                                                                <strong>№:</strong
+                                                                ><input
+                                                                    type="text"
+                                                                    class="sequence"
+                                                                    name="number1"
+                                                                    value="1"
+                                                                    data-toggle="tooltip"
+                                                                    data-placement="bottom"
+                                                                    title="Порядковый номер"
+                                                                />
+                                                                2023-04-10 18:51:46
+                                                            </p>
+                                                            <p><strong> Сайты-примеры </strong></p>
+                                                            <div class="text">
+                                                                <p><a href="https://jlady.ru/" target="_blank">https://jlady.ru/</a></p>
+                                                                <p>
+                                                                    <a href="https://dental7.ru/treatment/krasota" target="_blank"
+                                                                        >https://dental7.ru/treatment/krasota</a
+                                                                    >
+                                                                </p>
+                                                                <p><a href="https://w.today/" target="_blank">https://w.today/</a></p>
+                                                                <p>
+                                                                    <a href="https://www.androidleo.com/">https://www.androidleo.com/</a> - пример
+                                                                    размещения блоков adsense
+                                                                </p>
+                                                                <p>
+                                                                    <strong>Темы для статей</strong><br /><a
+                                                                        href="https://w.today/sitemap"
+                                                                        target="_blank"
+                                                                        >https://w.today/sitemap</a
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="operations">
+                                                        <button
+                                                            id="is_block1"
+                                                            class="operations__item status-btn is-active"
+                                                            onclick="switch_flag('notepad', 1, 'is_block');"
+															data-tooltip="Вкл/Выкл" data-flow="down">
+                                                            <svg class="icon active" width="20" height="20">
+                                                                <use href="./assets/svg/icons.svg#icon-checked"></use>
+                                                            </svg>
+															<svg class="icon blocked" width="20" height="20">
+                                                                <use href="./assets/svg/icons.svg#icon-blocked"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <a class="operations__item edit-btn" href="#" data-tooltip="Изменить" data-flow="down">
+                                                            <svg class="icon" width="20" height="20">
+                                                                <use href="./assets/svg/icons.svg#icon-edit"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a class="operations__item remove-btn" href="#" onclick="return confirm('Удалить?');" data-tooltip="Удалить" data-flow="down">
+                                                            <svg class="icon" width="20" height="20">
+                                                                <use href="./assets/svg/icons.svg#icon-remove"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="tr-row-data">
+                                                <td class="center gray">
+                                                    <input name="ch[]" value="1" type="checkbox" class="checkbox" />
+                                                    <small class="gray" data-toggle="tooltip" data-placement="bottom" title="id записи"> 1 </small>
+                                                </td>
+                                                <td class="td-row-data">
+                                                    <div class="row-data-wrapper">
+                                                        <div class="row-data">
+                                                            <p>
+                                                                <strong>№:</strong
+                                                                ><input
+                                                                    type="text"
+                                                                    class="sequence"
+                                                                    name="number1"
+                                                                    value="1"
+                                                                    data-toggle="tooltip"
+                                                                    data-placement="bottom"
+                                                                    title="Порядковый номер"
+                                                                />
+                                                                2023-04-10 18:51:46
+                                                            </p>
+                                                            <p><strong> Сайты-примеры </strong></p>
+                                                            <div class="text">
+                                                                <p><a href="https://jlady.ru/" target="_blank">https://jlady.ru/</a></p>
+                                                                <p>
+                                                                    <a href="https://dental7.ru/treatment/krasota" target="_blank"
+                                                                        >https://dental7.ru/treatment/krasota</a
+                                                                    >
+                                                                </p>
+                                                                <p><a href="https://w.today/" target="_blank">https://w.today/</a></p>
+                                                                <p>
+                                                                    <a href="https://www.androidleo.com/">https://www.androidleo.com/</a> - пример
+                                                                    размещения блоков adsense
+                                                                </p>
+                                                                <p>
+                                                                    <strong>Темы для статей</strong><br /><a
+                                                                        href="https://w.today/sitemap"
+                                                                        target="_blank"
+                                                                        >https://w.today/sitemap</a
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="operations flexbox sp-between">
+                                                        <a
+                                                            id="is_block1"
+                                                            class="fa fa-check text-green"
+                                                            onclick="switch_flag('notepad', 1, 'is_block');"
+                                                            data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Вкл/Выкл"
+                                                        ></a>
+                                                        <a href="https://womandb.com/admin/edit_notepad/1"
+                                                            ><i
+                                                                class="fa fa-edit text-light-blue"
+                                                                data-toggle="tooltip"
+                                                                data-placement="bottom"
+                                                                title="Изменить"
+                                                            ></i
+                                                        ></a>
+                                                        <a href="https://womandb.com/admin/delete_notepad/1" onclick="return confirm('Удалить?');"
+                                                            ><i
+                                                                class="fa fa-remove text-red"
+                                                                data-toggle="tooltip"
+                                                                data-placement="bottom"
+                                                                title="Удалить"
+                                                            ></i
+                                                        ></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__copy">© 2014-2024 <a href="#" target="_blank">https://argon.ru</a></p>
+                <a class="footer__developer" href="https://t.me/sergey_703" target="_blank">Developer</a>
+            </footer>
+        </div>
+
+		<div id="modal-addform" class="modal">
+            <div class="modal__title">Обратный звонок</div>
+            <div class="modal__content">
+                <form class="modal__form" action="#">
+                    <div class="modal__field">
+                        <label class="modal__label" for="callback__user-name">
+                            <span class="modal__label-title">Имя</span>
+                        </label>
+                        <div class="modal__input-wrap">
+                            <input
+                                class="modal__input has-icon"
+                                type="text"
+                                id="callback__user-name"
+                                name="user-name"
+                                placeholder="Name"
+                                autofocus
+                                required
+                            />
+                            <svg class="modal__input-icon" width="16" height="16">
+                                <use href="./assets/svg/icons.svg#icon-person"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="modal__field">
+                        <label for="callback__user-phone" class="modal__label">
+                            <span class="modal__label-title">Phone</span>
+                        </label>
+                        <div class="modal__input-wrap">
+                            <input
+                                class="modal__input has-icon"
+                                type="tel"
+                                id="callback__user-phone"
+                                name="user-phone"
+                                placeholder="+7(___) ___-__-__ "
+                                required
+                            />
+                            <svg class="modal__input-icon" width="16" height="16">
+                                <use href="./assets/svg/icons.svg#icon-phone"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal__submit-btn">
+                        <svg class="icon" width="18" height="18">
+                            <use href="./assets/svg/icons.svg#icon-callback"></use>
+                        </svg>
+                        Перезвоните мне
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/admin/vendor/select2/js/select2.min.js"></script>
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script src="./assets/js/fancybox.umd.js"></script>
+
+        <script type="module" src="./assets/admin/js/admin.js"></script>
+    </body>
 </html>

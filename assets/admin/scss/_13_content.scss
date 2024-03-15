@@ -9,6 +9,85 @@ body.sidebar-collapse {
     width: calc(100% - 230px);
     padding: 15px;
     transition: 0.5s;
+
+    &__head {
+        margin-bottom: 15px;
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumbs {
+            margin-bottom: 0;
+            padding: 0px 10px;
+            border-radius: 2px;
+            font-size: 12px;
+            display: flex;
+            align-items: stretch;
+            &__item {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                & + li::before {
+                    content: ">\00a0";
+                    color: #97a0b3;
+                    padding: 0 5px;
+                }
+                &:last-child {
+                    .breadcrumbs__link {
+                        padding-right: 20px;
+                    }
+                }
+            }
+            &__link {
+                color: $basicColor;
+                display: inline-block;
+                padding: 12px 5px;
+                &:hover {
+                    text-decoration: underline;
+                    background-color: $grayColor;
+                }
+            }
+        }
+    }
+    &__breadcrumbs-wrap {
+        background: #d2d6de;
+    }
+    &__body {
+        margin-bottom: 20px;
+        .box {
+            &__body {
+                padding: 10px;
+            }
+            &__head {
+                display: flex;
+                align-items: stretch;
+                flex-wrap: wrap;
+                gap: 15px;
+                font-size: 13px;
+                padding-bottom: 10px;
+                .counters {
+                    display: flex;
+                    align-items: stretch;
+                    &__link {
+                        @include flex();
+                        height: 100%;
+                        padding: 0 7px;
+                        border-radius: 3px;
+
+                        &:hover {
+                            background-color: $grayColor;
+                        }
+                    }
+                }
+            }
+            &__content {
+
+
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -20,5 +99,23 @@ body.sidebar-collapse {
     .content {
         width: 100%;
         transition: 0.5s;
+
+        &__head {
+            .breadcrumbs {
+                &__link {
+                    // padding-top: 14px;
+                }
+            }
+        }
+
+        &__body {
+            .box {
+                &__body {
+                }
+                &__head {
+
+                }
+            }
+        }
     }
 }

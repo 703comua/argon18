@@ -19,8 +19,10 @@ body.sidebar-collapse {
         border-radius: 3px;
         border: 1px solid #374850;
         transition: 0.5s;
-        margin: 10px 10px;
+        margin: 10px;
+        font-size: 13px;
         &__input {
+            width: 100%;
             border-radius: 2px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
@@ -57,6 +59,9 @@ body.sidebar-collapse {
             }
         }
     }
+    .product-selection {
+        margin: 10px;
+    }
     .menu-aside {
         &__item {
             position: relative;
@@ -73,11 +78,6 @@ body.sidebar-collapse {
                 .menu-aside__link {
                     border-left-color: $blueColor;
                 }
-                > .menu-aside__row-btn {
-                    .icon {
-                        transform: rotate(0deg);
-                    }
-                }
                 .submenu {
                     display: block;
                 }
@@ -85,18 +85,18 @@ body.sidebar-collapse {
             .submenu {
                 background: #2c3b41;
                 display: none;
-                padding-left: 10px;
+                padding: 0px 0px 5px 10px;
+                font-size: 13px;
                 li {
                     position: relative;
-                    button {
+                    .menu-aside__row-btn {
                         height: 30px;
                     }
-                    &.active {
-                        > button {
-                            .icon {
-                                transform: rotate(0deg);
-                            }
-                        }
+                    .search-form {
+                        margin: 0;
+                    }
+                    &.form {
+                        padding: 5px 10px 5px 0;
                     }
                 }
                 a {
@@ -109,6 +109,13 @@ body.sidebar-collapse {
                         color: #fff;
                     }
                 }
+                button {
+                    &.active {
+                        .icon {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
             }
         }
         &__link {
@@ -117,7 +124,7 @@ body.sidebar-collapse {
             border-left: 3px solid transparent;
             color: #b8c7ce;
             position: relative;
-            padding-left: 15px;
+            padding-left: 10px;
             height: 44px;
             .icon {
                 fill: #b8c7ce;
@@ -135,6 +142,10 @@ body.sidebar-collapse {
                         fill: #fff;
                     }
                 }
+            }
+            .count {
+                display: inline-block;
+                margin-left: 8px;
             }
         }
         &__row-btn {
@@ -156,6 +167,11 @@ body.sidebar-collapse {
                 transform: rotate(90deg);
                 @include tr();
             }
+            &.active {
+                .icon {
+                    transform: rotate(0deg);
+                }
+            }
         }
     }
 }
@@ -172,6 +188,7 @@ body.sidebar-collapse {
         height: calc(100vh - 150px);
         transform: translateX(-100%);
         position: fixed;
+        z-index: 2;
         top: 100px;
         left: 0;
         transition: 0.5s;

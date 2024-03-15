@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------- */
-$basicColor: #1c1e21;
+$basicColor: #333;
 $basicFontSize: 14px;
 
 $blueColor: #3c8dbc;
@@ -14,11 +14,11 @@ $grayColor: #eceef2;
 $gray2Color: #aeaeae;
 $borderColor: #e9e9e9;
 
-$greenColor: #00a046;
+$greenColor: #00a65a;
 $green2Color: #6dbe14;
 $orangeColor: #ff781e;
 $violetColor: #7153c9;
-$redColor: #dd2b1c;
+$redColor: #dd4b39;
 $lightblueColor: #00a6ff;
 $yellowColor: #ffa900;
 
@@ -79,7 +79,88 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
+.modal {
+    display: none;
+}
+.commands-th {
+    width: 40px;
+}
+.operations {
+    flex-direction: column;
+    @include flex();
+    gap: 15px;
+    &__item {
+        display: block;
+    }
+    .status-btn {
+        @include flex();
+        background: none;
+        border: none;
+        .icon {
+            fill: $greenColor;
+        }
+        &.is-active {
+            .icon.blocked {
+                display: none;
+            }
+        }
+        &.is-blocked {
+            .icon {
+                fill: $redColor;
+            }
+            .icon.active {
+                display: none;
+            }
+        }
+    }
+    .edit-btn {
+        .icon {
+            fill: $blueColor;
+        }
+    }
+    .remove-btn {
+        .icon {
+            fill: $redColor;
+        }
+    }
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+.count {
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: 1;
+    border-radius: 2px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $darkgrayColor;
+}
+.select2 {
+    font-size: 13px;
+}
+.select2-container {
+    width: 100%;
+}
+.select2-results {
+    font-size: 13px;
+    line-height: 1.4;
+}
 .success {
     background-color: #00a65a;
 }
@@ -97,6 +178,24 @@ body {
 }
 .navi {
     background-color: #001a35;
+}
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    &__box {
+        border-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding: 10px;
+    }
+    &__header {
+        padding: 0px 0 10px 0;
+    }
 }
 @media screen and (min-width: 768px) {
     .section-title {
@@ -362,41 +461,71 @@ blockquote {
     width: 100%;
 }
 
+.badge {
+    margin-left: 8px;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+
+    &.bg-light-blue {
+        background-color: #3c8dbc !important;
+    }
+    &.bg-green {
+        background-color: #00a65a !important;
+    }
+    &.bg-red {
+        background-color: #dd4b39 !important;
+    }
+}
+
 .btn {
     @include flex();
     justify-content: center;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    color: #666666;
     padding: 6px 12px;
-    transition: .25s;
-
+    transition: 0.25s;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 1.42857143;
+    font-size: 13px;
     .icon {
-        fill: #666666;
+        fill: #fff;
         margin-right: 8px;
     }
-
     &.jc-reverse {
         flex-direction: row-reverse;
     }
     &:hover,
     &:focus {
-        background-color: #e7e7e7;;
-        border-color: #adadad;
     }
-    &.btn-no-icon {
-        justify-content: center;
-        padding: 12px 20px;
+    &.btn-success {
+        background-color: #00a65a;
+        border-color: #008d4c;
+        &:hover {
+            background-color: #008d4c;
+            border-color: #398439;
+        }
     }
-    &.btn-neon {
-        background: $neonColor;
-        border: 1px solid $neonColor;
+    &.btn-gray {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        color: #666666;
         &:hover,
         &:focus {
-            color: $neonColor;
-            background-color: #fff;
+            background-color: #e7e7e7;
+            border-color: #adadad;
             .icon {
-                fill: $neonColor;
+                fill: #666666;
+                margin-right: 8px;
             }
         }
     }
@@ -739,8 +868,6 @@ button {
 
 input,
 textarea {
-    height: 60px;
-    width: 100%;
     border-radius: 5px;
     background-color: #ffffff;
     border: 1px solid #e6e6e6;
@@ -880,8 +1007,6 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-}
+@media (max-width: 991px) {
 
-@media (max-width: 600px) {
 }
