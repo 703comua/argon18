@@ -109,7 +109,7 @@
             </header>
             <main class="main">
                 <aside class="aside">
-                    <div class="product-selection">
+                    <!-- <div class="product-selection">
                         <select class="form-control select2">
                             <option value="">Выборка товара</option>
                             <option>1) Товар в наличии</option>
@@ -124,7 +124,7 @@
                             <option>10) Товар Популярный</option>
                             <option>11) Товар НЕ Популярный Товар НЕ Популярный</option>
                         </select>
-                    </div>
+                    </div> -->
                     <form action="#" class="search-form">
                         <input class="search-form__input" type="text" placeholder="Поиск товара по id" />
                         <button class="search-form__btn" type="submit">
@@ -133,16 +133,65 @@
                             </svg>
                         </button>
                     </form>
-                    <form action="#" class="search-form">
+                    <!-- <form action="#" class="search-form">
                         <input class="search-form__input" type="text" placeholder="Поиск товара по имени" />
                         <button class="search-form__btn" type="submit">
                             <svg class="icon" width="14" height="14">
                                 <use href="./assets/svg/icons.svg#icon-search"></use>
                             </svg>
                         </button>
-                    </form>
+                    </form> -->
                     <ul class="aside__menu menu-aside">
                         <li class="menu-aside__item title">Меню навигации</li>
+						<li class="menu-aside__item">
+                            <a href="#" class="menu-aside__link">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./assets/svg/icons.svg#icon-products"></use>
+                                </svg>
+                                Товары
+                                <span class="count success">23</span>
+                            </a>
+                            <button class="menu-aside__row-btn">
+                                <svg class="icon" width="10" height="10">
+                                    <use href="./assets/svg/icons.svg#icon-chevron-down"></use>
+                                </svg>
+                            </button>
+                            <ul class="submenu">
+                                <li>
+                                    <div class="search-form">
+                                        <select class="form-control select2" style="width: 210px">
+                                            <option value="">Выборка товара</option>
+                                            <option>1) Товар в наличии</option>
+                                            <option>2) Товар уточнить наличие</option>
+                                            <option>3) Товар ожидаем</option>
+                                            <option>4) Товар Новинка</option>
+                                            <option>5) Товар НЕ Новинка</option>
+                                            <option>6) Товар Топ продаж</option>
+                                            <option>7) Товар НЕ Топ продаж</option>
+                                            <option>8) Товар Распродажа</option>
+                                            <option>9) Товар НЕ Распродажа</option>
+                                            <option>10) Товар Популярный</option>
+                                            <option>11) Товар НЕ Популярный Товар НЕ Популярный</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="form">
+                                    <form action="#" class="search-form">
+                                        <input class="search-form__input" type="text" placeholder="Поиск товара по имени" />
+                                        <button class="search-form__btn" type="submit">
+                                            <svg class="icon" width="14" height="14">
+                                                <use href="./assets/svg/icons.svg#icon-search"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li><a href="#">Новинки <span class="count new">23</span></a></li>
+                                <li><a href="#">Топ продаж <span class="count top">23</span></a></li>
+                                <li><a href="#">Распродажа <span class="count sale">23</span></a></li>
+                                <li><a href="#">Популярный <span class="count popular">23</span></a></li>
+                                <li><a href="#">Архивный <span class="count arhiv">23</span></a></li>
+                            </ul>
+						</li>
                         <li class="menu-aside__item">
                             <a href="#" class="menu-aside__link">
                                 <svg class="icon" width="16" height="16">
@@ -160,7 +209,7 @@
                                 <li>
                                     <div class="search-form">
                                         <select class="form-control select2" style="width: 210px">
-                                            <option value="">Поиск раздела по имени</option>
+                                            <option value="">Поиск раздела по названию</option>
                                             <option>1) Товар в наличии</option>
                                             <option>2) Товар уточнить наличие</option>
                                             <option>3) Товар ожидаем</option>
@@ -175,7 +224,7 @@
                                         </select>
                                     </div>
                                 </li>
-                                <li class="form">
+                                <!-- <li class="form">
                                     <form action="#" class="search-form">
                                         <input class="search-form__input" type="text" placeholder="Поиск раздела по id" />
                                         <button class="search-form__btn" type="submit">
@@ -184,7 +233,7 @@
                                             </svg>
                                         </button>
                                     </form>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="#">1) Раздел 1</a>
                                     <button class="menu-aside__row-btn">
