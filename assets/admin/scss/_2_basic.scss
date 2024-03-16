@@ -150,6 +150,18 @@ body {
     font-weight: 700;
     color: #fff;
     background-color: $darkgrayColor;
+    &.new {
+        background-color: $greenColor;
+    }
+    &.top {
+        background-color: $yellowColor;
+    }
+    &.sale {
+        background-color: $redColor;
+    }
+    &.preorder {
+        background-color: $naviColor;
+    }
 }
 .select2 {
     font-size: 13px;

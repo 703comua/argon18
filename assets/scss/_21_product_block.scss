@@ -62,10 +62,13 @@
                     background: $yellowColor;
                 }
                 &.is_new {
+                    background: $greenColor;
+                }
+                &.is_popular {
                     background: $naviColor;
                 }
                 &.is_preorder {
-                    background: $neonColor;
+                    background: $naviColor;
                 }
             }
         }

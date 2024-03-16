@@ -140,9 +140,14 @@
 				display: inline-block;
 			}
 
-			&.in-stock {
+			&.popular {
 				span {
 					background: $violetColor;
+				}
+			}
+			&.preorder {
+				span {
+					background: $naviColor;
 				}
 			}
 
