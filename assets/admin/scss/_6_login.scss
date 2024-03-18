@@ -1,0 +1,169 @@
+/*-------------*/
+/*--- modal ---*/
+/*-------------*/
+.fixed-overlay {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background: url("../img/login-bg.jpg") center center/cover no-repeat;
+}
+
+.fixed-overlay:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	&.modal-login {
+		display: block;
+	}
+}
+
+.modal_container {
+    padding: 0px;
+    background-color: #fff;
+    color: #000;
+}
+
+/*--- box ---*/
+.box-header {
+    color: #444;
+    display: block;
+    padding-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.box-footer {
+    border-top: 1px solid #f4f4f4;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.box-footer .link {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.login {
+    border-top: 3px solid #3c8dbc;
+    background: #ffffff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 320px;
+    margin: auto;
+}
+
+.link {
+    color: #3c8dbc;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #72afd2;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    padding-top: 15px;
+}
+
+/*----------------------*/
+/*--- form elements  ---*/
+/*----------------------*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group .label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group::-webkit-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-group:-ms-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-group::-ms-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-group::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #d2d6de;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #3c8dbc;
+}
+
+.btn.btn-primary {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    user-select: none;
+    border-radius: 3px;
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+    box-shadow: none;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.btn.btn-primary:hover {
+    background-color: #367fa9;
+    border-color: #204d74;
+}
